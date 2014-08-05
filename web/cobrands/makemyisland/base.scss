@@ -5,3 +5,17 @@
 
 @import "../sass/base";
 
+#site-logo {
+    background: url(/cobrands/makemyisland/make-my-island-logo.gif) 0px 0px no-repeat;
+    background-size: contain;
+    background-color: $blue;
+}
+
+#site-header,
+body.frontpage #site-header,
+body.mappage #site-header,
+{
+    min-height: 3em;
+    @include background(none);
+    background-color: $blue;
+}
