@@ -8,5 +8,9 @@ sub country {
     return 'MV';
 }
 
+sub users_can_hide {
+  return 1;
+}
+
 1;
 
