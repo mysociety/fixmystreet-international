@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Creates symlinks from cobrands in the fixmystreet-international repository
+# into the main fixmystreet installation dir so they can be used.
+# Should be run as part of the deploy of a FMS vhost.
+
+# abort on any errors
+set -e
+
+# check that we are in the expected directory
+cd `dirname $0`/../..
+
+# Overwrite existing files and show filenames
+LN_FLAGS="-s -f -v"
+
+echo "Creating symlinks in $(pwd):"
+
+PERL_MODULES_SOURCE_DIR=fixmystreet-international/perllib/FixMyStreet/Cobrand
+PERL_MODULES_TARGET_DIR=perllib/FixMyStreet/Cobrand
+for cobrand in $(pwd)/$PERL_MODULES_SOURCE_DIR/*pm; do
+    ln $LN_FLAGS $cobrand $PERL_MODULES_TARGET_DIR/
+done
+
+WEB_TEMPLATES_SOURCE_DIR=fixmystreet-international/templates/web
+WEB_TEMPLATES_TARGET_DIR=templates/web
+for cobrand in $(pwd)/$WEB_TEMPLATES_SOURCE_DIR/*; do
+    ln $LN_FLAGS $cobrand $WEB_TEMPLATES_TARGET_DIR/
+done
+
+EMAIL_TEMPLATES_SOURCE_DIR=fixmystreet-international/templates/email
+EMAIL_TEMPLATES_TARGET_DIR=templates/email
+for cobrand in $(pwd)/$EMAIL_TEMPLATES_SOURCE_DIR/*; do
+    ln $LN_FLAGS $cobrand $EMAIL_TEMPLATES_TARGET_DIR/
+done
+
+WEB_ASSETS_SOURCE_DIR=fixmystreet-international/web/cobrands
+WEB_ASSETS_TARGET_DIR=web/cobrands
+for cobrand in $(pwd)/$WEB_ASSETS_SOURCE_DIR/*; do
+    if [ -d $cobrand ] && [ ! -L $cobrand ]; then
+        ln $LN_FLAGS $cobrand $WEB_ASSETS_TARGET_DIR/
+    fi
+done
+
+# We need to create a relative symlink so cobrand SCSS can import base files
+cd $WEB_ASSETS_SOURCE_DIR
+echo "Creating symlinks in $(pwd):"
+ln $LN_FLAGS ../../../$WEB_ASSETS_TARGET_DIR/sass .
