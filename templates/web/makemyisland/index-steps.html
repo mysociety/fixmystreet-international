@@ -1,0 +1,15 @@
+<h2>[% loc('How to report a problem') %]</h2>
+
+<ol class="big-numbers">
+    <li>
+      Locate the problem on the
+      <a href="/around?pc=Fonadhoo">map of the island</a>
+    </li>
+    <li>[% loc('Enter details of the problem') %]</li>
+    <li>[% loc('We send it to the council on your behalf') %]</li>
+</ol>
+
+<section class="full-width">
+[% INCLUDE "front/stats.html" %]
+[% TRY %][% INCLUDE "front/tips.html" %][% CATCH file %][% END %]
+</section>
