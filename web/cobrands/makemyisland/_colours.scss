@@ -1,13 +1,10 @@
 /* COLOURS */
 
 
-// colours specified by MakeMyIsland team
-// from http://www.w3schools.com/cssref/css_colorsfull.asp
+$yellow: rgb(249, 255, 198);
+$blue: rgb(159, 217, 234);
 
-$blue: #4169E1; // "RoyalBlue"
-$green: #40E0D0; // "Turquoise"
-
-$primary: $green;
+$primary: $yellow;
 $primary_b: #000000;
 $primary_text: #222222;
 
@@ -15,7 +12,7 @@ $base_bg: $blue;
 $base_fg: $primary_text;
 
 $map_nav_bg: $blue;
-$nav_fg: #fff;
+$nav_fg: #000;
 $nav_fg_hover: $primary;
 
 $col_click_map: $blue;
