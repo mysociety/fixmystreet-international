@@ -2,12 +2,18 @@
 
 @import "../sass/layout";
 
+body,
+body.frontpage {
+    background: $beach_cream url(/cobrands/makemyisland/beach-large.jpg) top center no-repeat;
+    background-size: 100%;
+}
+
 #site-logo,
 body.frontpage #site-logo {
     margin-top: -8px;
     margin-left: 10px;
     height: 100px;
-    background: url(make-my-island-logo.gif) 0px 0px no-repeat;
+    background: url(make-my-island-logo.png) 0px 0px no-repeat;
 }
 
 body.mappage #site-logo {
@@ -34,8 +40,47 @@ body.frontpage #united-nations-dp-logo {
   z-index:3; // clear of the nav container
 }
 
+#front-main {
+    max-width: 55em; // 60em (.container width), minus 2x2em (padding), minus 2x0.5em (.content margin)
+    margin: 0 auto;
+    background-color: #ffffe1;
+    background-color: rgba(#ffffe1, 0.8);
+}
+
+#front-main,
+body.twothirdswidthpage .container .content,
+body.fullwidthpage .container .content {
+    border-radius: 0.3em;
+    padding: 2em;
+}
+
+body.twothirdswidthpage {
+  .content {
+    width: 38em; // 40em in parent, with 1em padding; increase in padding above, so reduce width
+  }
+}
+
+ol.big-numbers > li:before,
+#front-howto #front_stats div big {
+    color: mix(#fff, $blue, 50%);
+}
+
+#front-howto #front_stats {
+    border-top-color: mix(#fff, $blue, 50%);
+}
+
+body.mappage .nav-wrapper .nav-wrapper-2 {
+    background: #83D9F0 url(/cobrands/makemyisland/beach-large.jpg) top center no-repeat;
+    background-size: 100%;
+}
+
 ul#main-menu {
   margin-right: 70px; // to clear the UNDP logo
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li span.hover {
+    color: #000;
 }
 
 // to push the user-mata clear of the unusually deep (square) logo
