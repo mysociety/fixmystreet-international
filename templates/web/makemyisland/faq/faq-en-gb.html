@@ -15,53 +15,53 @@
 <h1><a name="faq"></a>Frequently Asked Questions</h1>
     <dl>
         <dt>What is [% PROCESS 'site-name.html' -%]?</dt>
-        <dd>[% PROCESS 'site-name.html' -%] is a site to help people report, view,
-or discuss local problems they&rsquo;ve found to their local council by
-simply locating them on a map. Alternatively, send a problem report to
-us via SMS and we'll enter it into [% PROCESS 'site-name.html' -%] for you.
+        <dd>[% PROCESS 'site-name.html' -%] is a site to help people report to
+their local authority, view, or discuss local problems they&rsquo;ve found by
+simply locating them on a map.
         </dd>
         <dt>How do I get in touch with [% PROCESS 'site-name.html' -%]?</dt>
-        <dd>Here&rsquo;s our <a href="/contact">contact page</a>.</dd>
+        <dd>Here&rsquo;s our <a href="/contact">contact page</a>. Or simply
+            send an SMS to 7592203. </dd>
         <dt>What sort of problems should I report with [% PROCESS 'site-name.html' -%]?</dt>
-        <dd>Currently we're accepting reports about problems with:
-    <ul><li>Erosion
-    <li>Street lights
-    <li>Dumped waste
+        <dd>Currently we're accepting reports about problems including:
+    <ul><li>Dumping waste in public areas (All islands)
+    <li>Broken street lights (Laamu Atoll only)
+    <li>Erosion of beaches (Laamu atoll only)
+    <li>Damage to public property (Laamu Atoll only)
+    <li>Graffiti (Laamu Atoll only)
+    <li>Improper parking along the main road (Laamu Atoll only)
     </ul>
     </dd>
 
     <dt>What isn&rsquo;t [% PROCESS 'site-name.html' -%] for?</dt>
-    <dd>[% PROCESS 'site-name.html' -%] is not a way of getting in touch with[% c.cobrand.is_council ? 'the' : 'your' %] council for all
+    <dd>[% PROCESS 'site-name.html' -%] is not a way of getting in touch with[% c.cobrand.is_council ? 'the' : 'your' %] authority for all
     issues &ndash; please use [% PROCESS 'site-name.html' -%] only for problems such as the above.
-    <strong>You will need to contact [% c.cobrand.is_council ? 'the' : 'your' %] council
+    <strong>You will need to contact [% c.cobrand.is_council ? 'the' : 'your' %] authority
     directly for problems such as</strong>: 
 
     <ul><li>Anti-social behaviour
     <li>Any urgent or emergency problems
-    <li>Noise pollution or barking dogs
+    <li>Noise pollution
     <li>Fires and smoke/smell pollution
-    <li>Proposals for speed bumps/ CCTV/ pedestrian crossings/ new road layouts/ etc.
-    <li>Complaining about your neighbours
-    <li>Complaining about the council
-    <li>Joy riding, drug taking, animal cruelty, or other criminal activity
+    <li>Missing wheelie bins or recycling boxes
+    <li>Missed rubbish collections
     </ul>
   </dd>
 
         <dt>How do I use the site?</dt>
-        <dd>After choosing the right area (currently we're just running the 
-          project on Fonadhoo), you'll see a map of that area. You can view
+        <dd>After entering a location, you'll see a map of that area. You can view
           problems already reported in that area, or report ones of your own
           simply by clicking on the map at the location of
           the problem.</dd>
         <dt>How are the problems solved?</dt>
-        <dd>They are reported to the [% IF !c.cobrand.is_council %]relevant[% END %] council by email.
-          The council can then resolve the problem the way they normally would.
+        <dd>They are reported to the [% IF !c.cobrand.is_council %]relevant[% END %] authority by email.
+          The authority can then resolve the problem the way they normally would.
           Alternatively, you can discuss the problem on the website with others, and
-          then together lobby the council to fix it, or fix it directly yourselves.</dd>
+          then together lobby the authority to fix it, or fix it directly yourselves.</dd>
         <dt>Is it free?</dt>
-        <dd>The site is free to use, yes. [% PROCESS 'site-name.html' -%] is being supported by 
-          <a hrfe="http://www.undp.org">UNDP</a> locally, with help from
-          <a href="http://www.mysociety.org">mySociety</a> who provide the
+        <dd>The site is free to use, yes. [% PROCESS 'site-name.html' -%] is
+maintained by the respective authorities who are mandated to address these
+issues. <a href="http://www.mysociety.org">mySociety</a> provide the
           <a href="http://fixmystreet.org">FixMyStreet platform</a> that's powering
           this site.
         </dd>
@@ -69,28 +69,44 @@ us via SMS and we'll enter it into [% PROCESS 'site-name.html' -%] for you.
 	<dt>Can I use [% PROCESS 'site-name.html' -%] on my mobile?</dt>
 	<dd>
 	<p>The [% PROCESS 'site-name.html' -%] website will already work on your mobile phone, adapting to
-	the size of your screen automatically. We don't currently have [% PROCESS 'site-name.html' -%] apps
-  for specific phones.
+	the size of your screen automatically. There will be [% PROCESS 'site-name.html' -%] apps
+  for Android and iPhone.
 	</dd>
     </dl>
     <h2><a name="practical"></a>Practical Questions</h2>
     <dl>
-        <dt>I&rsquo;m from a council, where do you send the reports?</dt>
-        <dd><a href="/contact">Contact us</a>
-          to find out where reports go at the moment, or to ask us to
+        <dt>I&rsquo;m from an authority, where do you send the reports?</dt>
+        <dd>You can either leave a test report or <a href="/contact">Contact us</a>
+          to find out where reports go at the moment. Also <a href="/contact">Contact us</a> to  ask us to
           update the address or addresses we use.</dd>
         </dd>
+        <dt>Will I remain anonymous after reporting an issue?</dt>
+        <dd>You can register yourself under any name on the website or use the
+mobile phone application to report issues under a pseudonym. However if you
+report through SMS, your mobile phone number will be sent to the
+authorities</dd>
+        <dt>I&rsquo;m from an authority, can we have a [% PROCESS 'site-name.html' -%]?</dt>
+        <dd>Quite possibly - <a href="/contact">Contact the team</a>
+          to find out.</dd>
         <dt>Do you remove silly or illegal content?</dt>
         <dd>[% PROCESS 'site-name.html' -%] is not responsible for the content and accuracy
 of material submitted by its users. We reserve the right to edit or remove any
 problems or updates which we consider to be inappropriate upon being informed
 by a user of the site.
         </dd>
+        <dt>Why can&rsquo;t I zoom out more on the reporting map?</dt>
+        <dd>We want to keep [% PROCESS 'site-name.html' -%] locally focused so
+you will not be able to report problems outside of the areas we have entered
+authorities for. The map on Your Reports will let you see all the reports
+you've made, wherever they are. If you're from an authority then the emailed
+version of the problem report may also contain the closest road or postcode to
+the pin on the map.
+        </dd>
     <h2><a name="organisation"></a>Organisation Questions</h2>
     <dl>
         <dt>Who built [% PROCESS 'site-name.html' -%]?</dt>
-        <dd>[% PROCESS 'site-name.html' -%] is running the <a href="http://fixmystreet.org/">FixMyStreet platform</a>
-          by UK charity <a href="http://www.mysociety.org/">mySociety</a>.
+        <dd>[% PROCESS 'site-name.html' -%] is running on the <a href="http://fixmystreet.org/">FixMyStreet platform</a>
+          created by UK charity <a href="http://www.mysociety.org/">mySociety</a>.
         </dd>
     </dl>
 [% INCLUDE 'footer.html' pagefooter = 'yes' %]
