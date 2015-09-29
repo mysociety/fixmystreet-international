@@ -1,0 +1,13 @@
+@import "../sass/h5bp";
+@import "./_colours";
+@import "../sass/mixins";
+@import "compass";
+
+@import "../sass/base";
+
+#site-logo {
+    width: 299px;
+    height: 40px;
+    background: url(fixmycommunity-logo.png);
+    background-repeat: no-repeat;
+}
