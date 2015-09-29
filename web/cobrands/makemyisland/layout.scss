@@ -74,12 +74,11 @@ body.mappage .nav-wrapper .nav-wrapper-2 {
     background-size: 100%;
 }
 
-ul#main-menu {
+.nav-menu--main {
   margin-right: 70px; // to clear the UNDP logo
 }
 
-#main-nav ul li a:hover,
-#main-nav ul li span.hover {
+.nav-menu a:hover, .nav-menu span.hover {
     color: #000;
 }
 
