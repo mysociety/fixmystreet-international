@@ -18,5 +18,12 @@ sub users_can_hide {
   return 1;
 }
 
+sub pin_colour {
+    my ( $self, $p, $context ) = @_;
+    return 'green' if $p->is_fixed || $p->is_closed;
+    return 'red' if $p->state eq 'confirmed';
+    return 'yellow';
+}
+
 1;
 
