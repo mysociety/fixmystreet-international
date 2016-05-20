@@ -1,0 +1,10 @@
+@import "_colours";
+@import "../sass/layout";
+
+body.frontpage {
+    #site-logo {
+        width: 449px;
+        height: 60px;
+        background: url(fixmycommunity-logo-large.png);
+    }
+}
