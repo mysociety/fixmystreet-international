@@ -1,27 +1,3 @@
-[% 
-    SET bodyclass = 'mappage';
-    PROCESS "report/photo-js.html";
-    PROCESS "maps/${map.type}.html";
-
-    problem_title = problem.title_safe _ ' - ' _ loc('Viewing a problem');
-    INCLUDE 'header.html'
-        title = problem_title
-        rss = [ loc('Updates to this problem, FixMyStreet'), "/rss/$problem.id" ]
-        robots = 'index, nofollow';
-%]
-
-[% map_html %]
-</div>
-
-[% IF login_success %]
-    <p class='form-success'>[% loc('You have successfully signed in; please check and confirm your details are accurate:') %]</p>
-[% END %]
-
-[% INCLUDE 'report/banner.html' %]
-
-[% INCLUDE 'report/_main.html' %]
-[% TRY %][% INCLUDE 'report/_message_manager.html' %][% CATCH file %][% END %]
-
 <div class="shadow-wrap">
     <ul id="key-tools">
         [% IF c.user_exists AND c.cobrand.users_can_hide AND c.user.belongs_to_body( c.cobrand.council_id ) %]
@@ -54,10 +30,10 @@
 
 <div id="report-updates-data" class="hidden-js">
     <form action="[% c.uri_for( '/alert/subscribe' ) %]" method="post">
-        <a href="[% c.uri_for( '/rss', problem.id ) %]">
+        <p><a href="[% c.uri_for( '/rss', problem.id ) %]">
             <img src="/i/feed.png" width="16" height="16" title="[% loc('RSS feed') %]" alt="[% loc('RSS feed of updates to this problem' ) %]" border="0">
         </a>
-        <p>[% loc('Receive email when updates are left on this problem.' ) %]</p>
+        [% loc('Receive email when updates are left on this problem.' ) %]</p>
         <fieldset>
         <label class="hidden n" for="alert_rznvy">[% loc('Your email') %]</label>
         <div class="form-txt-submit-box">
@@ -71,8 +47,3 @@
 </div>
 
 </div>
-
-[% TRY %][% INCLUDE 'report/sharing.html' %][% CATCH file %][% END %]
-[% INCLUDE 'report/updates.html' %]
-[% INCLUDE 'report/update-form.html' %]
-[% INCLUDE 'footer.html' %]
