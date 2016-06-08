@@ -1,0 +1,9 @@
+[%# We only want to show the Facebook sharing link for report confirmations. %]
+[% IF report %]
+    <div class="next-steps-sharing">
+        [% INCLUDE
+            'report/sharing.html'
+            problem = report
+        %]
+    </div>
+[% END %]

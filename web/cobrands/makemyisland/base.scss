@@ -1,0 +1,105 @@
+@import "../sass/h5bp";
+@import "./_colours";
+@import "../sass/mixins";
+@import "compass";
+
+@import "../sass/base";
+
+body.frontpage {
+    background: $beach_cream url(/cobrands/makemyisland/beach-small.jpg) top center no-repeat;
+    background-size: 100%;
+}
+
+#site-logo {
+    background: transparent url(/cobrands/makemyisland/make-my-island-logo.png) 0px 0px no-repeat;
+    background-size: contain;
+}
+
+#united-nations-dp-logo {
+  display: none;
+}
+
+#site-header,
+body.mappage #site-header {
+    min-height: 3em;
+    background: #83D9F0 url(/cobrands/makemyisland/beach-small.jpg) top center no-repeat;
+    background-size: 100%;
+}
+
+body.frontpage #site-header {
+    background: transparent;
+}
+
+#front-main #postcodeForm,
+#front-howto #front_stats {
+    background-color: #ffffe1;
+    background-color: rgba(#ffffe1, 0.8);
+}
+
+#front-recently .issue-list-a li {
+    background-color: transparent;
+
+    a {
+        background-color: #ffffe1;
+        background-color: rgba(#ffffe1, 0.8);
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+}
+
+ol.big-numbers > li:before {
+    color: rgba(100,100,100,0.4)
+}
+
+div#location-buttons {
+  margin: 1.333em auto;
+  .island-button {
+    margin:0 auto 1.5em auto;
+  }
+  a.front-page-button {
+    // @include button-reset(#FFD000, #cc9000, #aa7000, #300, #FFD000, #cc9000, #aa7000, #300);
+    @include button-reset($blue, darken($blue, 10%), darken($blue, 30%), white, $blue, darken($blue, 20%), darken($blue, 30%), white);
+    #front-main & {
+      text-decoration: none;
+    }
+    &:visited, &:hover {
+      color:white;
+    }
+  }
+}
+
+.share-report-on-facebook {
+    a {
+        display: block;
+        padding:0.7em 0.5em 0.5em 0.5em;
+        @include border-radius(4px);
+        background: #3b5998;
+        color: #fff;
+        text-align: center;
+
+        &:visited {
+            color: #fff;
+        }
+
+        &:hover,
+        &:focus {
+            background: darken(#3b5998, 5%);
+            text-decoration: none;
+        }
+
+        img {
+            margin-right: 0.5em;
+            vertical-align: -0.2em;
+            height: 1.3em;
+            width: auto;
+        }
+    }
+}
+
+.issue-list li,
+.form-box,
+h4.static-with-rule {
+    background-color: mix(#fff, desaturate($primary, 40%), 90%);
+}
