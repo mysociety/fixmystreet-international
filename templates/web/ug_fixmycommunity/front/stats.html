@@ -1,0 +1,33 @@
+[% USE Number.Format %]
+
+[%
+    stats = c.cobrand.front_stats_data();
+
+    new_text = nget(
+        "<big>%s</big> report",
+        "<big>%s</big> reports",
+        stats.new
+    );
+
+    fixed_text = nget(
+        "<big>%s</big> fixed",
+        "<big>%s</big> fixed",
+        stats.fixed
+    );
+
+    updates_text = nget(
+        "<big>%s</big> update on reports",
+        "<big>%s</big> updates on reports",
+        stats.updates
+    );
+
+    new_n = stats.new | format_number;
+    fixed_n = stats.fixed | format_number;
+    updates_n = stats.updates | format_number;
+%]
+
+<div id="front_stats">
+    <div>[% tprintf( new_text, decode(new_n) ) %]</div>
+    <div>[% tprintf( fixed_text, decode(fixed_n) ) %]</div>
+    <div>[% tprintf( updates_text, decode(updates_n) ) %]</div>
+</div>
