@@ -10,7 +10,7 @@ sub country {
 }
 
 sub enter_postcode_text {
-    return 'You can text in your report to <strong>+237 56 72 65 11</strong>. Or:<br>'
+    return 'You can text in your report to <strong>+237 671 05 05 71</strong>. Or:<br>'
         . _('Enter a nearby street name and area');
 }
 
