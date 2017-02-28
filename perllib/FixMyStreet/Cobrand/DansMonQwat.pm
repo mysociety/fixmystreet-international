@@ -30,4 +30,16 @@ sub change_category_text {
     return $category;
 }
 
+sub base_url_with_lang {
+    my $self = shift;
+    my $base = $self->base_url;
+    my $lang = $mySociety::Locale::lang;
+    if ($lang eq 'fr') {
+        $base =~ s{https://}{$&fr.};
+    } else {
+        $base =~ s{https://}{$&en.};
+    }
+    return $base;
+}
+
 1;
