@@ -1,0 +1,1 @@
+Tenga en cuenta que no enviamos actualizaciones al [% update.problem.body %] - los actualizaciones están intencionados como   un lugar para usuarios de [% site_name %] de discutir o ofrecer ayuda uno a los otros.

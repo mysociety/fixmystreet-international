@@ -1,5 +1,7 @@
 *.ttc
 web/cobrands/*/*.css
+web/cobrands/*/*.css.map
 web/cobrands/sass
 web/cobrands/fixmystreet
 .sass-cache
+.DS_Store

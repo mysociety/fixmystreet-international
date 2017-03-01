@@ -1,0 +1,22 @@
+Subject: Cuestionario sobre su reporte de '[% report.title %]' por [% site_name %] 
+Buenas días [% report.name %],
+
+Hace [% created %], entregó un reporte por [% site_name %].
+
+Los detalles de este reporte están al fondo de este mensaje.
+
+Para actualizar [% site_name %], nos alegra muchísimo si pueda
+Seguir el enlace abajo y rellenar un cuestionario para actualizar el estado de su problema
+:
+
+    [% url %]
+
+[% signature %]
+
+Los detalles de su reporte:
+
+[% report.title %]
+
+[% report.detail %]
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

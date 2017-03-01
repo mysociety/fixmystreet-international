@@ -1,0 +1,34 @@
+Subject: Su reporte por [% site_name %] ha sido moderado.
+
+Buenas días [% user.name %],
+
+Su reporte por [% site_name %] ha sido moderado.
+[% IF types == 'hide' -%]
+El reporte ha sido ocultado.
+[% ELSE %]
+LLos datos siguientes han sido cambiados:
+
+	[% types %]
+
+[% END -%]
+
+Su reporte tenía el sujeto:
+
+[% problem.moderation_original_data.title %]
+
+Y los detalles:
+
+[% problem.moderation_original_data.detail %]
+
+[% UNLESS types == 'hide' %]
+Puede ver el reporte a [% report_uri %]
+[% END %]
+
+Si cree que este reporte no debe ser moderado, pueda contactar al equipo por [% report_complain_uri %]
+
+Gracias por entregar su reporte por [% site_name %].
+
+
+[% INCLUDE 'signature.txt' %]
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

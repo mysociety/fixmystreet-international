@@ -1,0 +1,48 @@
+.frontpage-hero,
+.frontpage-types,
+.frontpage-steps {
+    padding: 3em 0;
+}
+
+.frontpage-hero {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        font-size: 1.5em;
+    }
+}
+
+.frontpage-search {
+    font-size: 1.2em;
+}
+
+.frontpage-types {
+    padding-top: 6em; // make room for the search box
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+.frontpage-steps {
+    h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        font-size: 1.5em;
+    }
+}
+
+
+.pc_alternatives {
+    li {
+        margin-bottom: 1em;
+    }
+
+    a {
+        padding: 1em 1.5em;
+    }
+}
