@@ -1,0 +1,21 @@
+Subject: Reporte enviado por[% site_name %] título como: [% title %]
+
+Buenas días,
+
+Gracias para elegir [% site_name %] para enviar su reporte
+"[% title %]".
+
+Confirmamos que el reporte ya fue enviado al [% bodies_name %],
+que debe responder directamente a usted. 
+
+También es posible ver su reporte en [% url %],
+donde sea posible para la gente de leer, hacer comentarios o ofrecer consejos.
+
+No dude en añadir las actualizaciones a esa página, en recuerda que esas actualizaciones no se envian al ayuntamiento.
+will not be sent to your council.
+
+Si quiere enviar una actualización al ayuntamiento, por favor espere su respuesta para que pueda responder directamente.
+
+Ojalá que su problema sea arreglado pronto.
+[% signature %]
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.

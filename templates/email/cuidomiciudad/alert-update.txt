@@ -1,0 +1,22 @@
+Subject: Nuevas actualizaciones del reporte de [% site_name %] con título: '[% title %]'
+
+Nos pidió que le enviásemos un email cada vez el reporte titulado como [% title %] fur actualizado por
+[% site_name %].
+
+Se hizó los siguientes actualizaciones al reporte:
+
+[% INCLUDE '_email_comment_list.txt' %]
+
+[% state_message %]
+Si quiere ver o responder a la actualización, por favor visita al sigenute enlace:
+    [% problem_url %]
+
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.
+[% signature %]
+
+¿Cancelar la suscripción?
+
+Ahora, le enviamos un email cuando alguien deja una actualización sobre el reporte [% title %] en [% site_name %].
+
+Si ya no quiere recibir un email cuando alguien actualiza ese reporte, por favor sigue este enlace:
+[% unsubscribe_url %]

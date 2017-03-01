@@ -1,0 +1,58 @@
+[%
+
+email_summary = "Un usuario de CuidoMiCiudad reportó un nuevo problema en su área";
+email_footer = "Si hay un email más conveniente para mensajes o reportes sobre " _ category_footer _ ", avisanos o añadelo por favor. Se va mejorar el servicio para
+usuarios locales.  No hesite enviarnos cualquier commentarios porque ayudarnos a mejorar el sitio.";
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Nueva problema en su área</h1>
+  <p style="[% p_style %]">[% missing %][% multiple %]Un usuario de [% site_name %] entregó el reporte siguente de un problema local que cree
+requerir su atención.</p>
+
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% url %]">Ver reporte entero</a>
+  </p>
+  <h2 style="[% h2_style %] margin: 30px 0 10px 0">Reportado por:</h2>
+  <table [% table_reset %]>
+    <tr>
+      <th style="[% contact_th_style %]">Nombre</th>
+      <td style="[% contact_td_style %]">[% name | html %]</td>
+    </tr>
+    <tr>
+      <th style="[% contact_th_style %]">Email</th>
+      <td style="[% contact_td_style %]"><a href="mailto:[% email | html %]">[% email | html %]</a></td>
+    </tr>
+    [%~ IF phone %]
+      <tr>
+        <th style="[% contact_th_style %]">Teléfono</th>
+        <td style="[% contact_td_style %]"><a href="tel:[% phone | html %]">[% phone | html %]</a></td>
+      </tr>
+    [%~ END %]
+  </table>
+  <p style="[% p_style %] margin-top: 0.5em;">Cualquier respuesta a este email irá directamente [% name | html %], el usuario que entregó el problema.</p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html' object = report %]
+    <h2 style="[% h2_style %]">[% title | html %]</h2>
+    [%~ IF category_line %]
+    <p style="[% secondary_p_style %]">[% category | html %]</p>
+    [%~ END %]
+    <p style="[% secondary_p_style %]">[% detail | html %]</p>
+    <p style="[% secondary_p_style %]">
+      <strong>Location:</strong>
+      <a href="[% osm_url %]" title="View OpenStreetMap of this location">
+        [%~ latitude %], [% longitude ~%]
+      </a>
+      [% IF closest_address %]<br>[% closest_address | trim | replace("\n\n", "<br>") %][% END %]
+    </p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

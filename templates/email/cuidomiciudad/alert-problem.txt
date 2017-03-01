@@ -1,0 +1,16 @@
+Subject: Nuevos reportes de [% site_name %] 
+
+Los siguentes nuevos reportes fue añadido al [% site_name %]:
+
+[% INCLUDE '_email_report_list.txt' %]
+
+[% signature %]
+
+¿Cancelar la suscripción?
+
+Nos pidió que le enviásemos un email cuando alguien hace un nueva reporte en [% site_name %]. Esto es un servicio gratuito de [% site_name %].
+Si ya 
+no quiere recibir los emails cuando hay nuevos reportes, por favor, sigue ese enlace:
+[% unsubscribe_url %]
+
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.Unsubscribe?

@@ -1,0 +1,26 @@
+Subject: Su reporte ha sido entregado :[% report.title %]
+
+Buenas días [% report.name %],
+
+Su reporte al [% report.body %] ha sido entregado por [% site_name %].
+
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Por favor tenga en cuenta que [% c.cobrand.council_name %] no es responsable de ese tipo de reporte.
+[% END %]
+
+Es posible verlo en:
+
+[% cobrand.base_url_for_report(report) %][% report.url %]
+
+Tu reporte tiene el sujeto:
+
+[% report.title %]
+
+Y los detalles:
+
+[% report.detail %]
+
+[% INCLUDE 'signature.txt' %]
+
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

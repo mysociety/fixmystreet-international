@@ -1,0 +1,19 @@
+Subject: Confirma su actualización por [% INCLUDE 'site-name.txt' | trim %]
+
+Buenas días [% update.name %],
+
+Por favor haz clic en el enlace abajo para confirmar su actualización por [% INCLUDE 'site-name.txt' | trim %]:
+
+[% token_url %]
+
+Si su cuenta de email no le permite cliquear el enlace, por favor copiarlo y pegarlo en su navegador.
+
+Su actualización dice:
+
+[% update.text %]
+
+[% INCLUDE 'update-confirm-donotsend.txt' %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

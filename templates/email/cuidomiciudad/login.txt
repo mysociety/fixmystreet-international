@@ -1,0 +1,13 @@
+Subject: Los detalles de su cuenta de [% site_name %] account
+
+Por favor, haz clic en el enlace abajo para confirmarsu dirección email.
+
+[% c.uri_for_action( 'auth/token', token ) %]
+
+Cuando lo hizo, sería posible ver y administrar todos los reportes y actualizaciones que hizo en
+[% site_name %].
+
+[% INCLUDE 'signature.txt' %]
+
+This
+Este email era enviado automaticamente de una dirección de correo electronico no utilizado - por favor no responde a este email.

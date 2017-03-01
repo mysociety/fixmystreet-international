@@ -1,0 +1,51 @@
+body.mappage {
+    .nav-wrapper {
+        .nav-wrapper-2 {
+            background-color: transparent;
+        }
+    }
+
+    #main-nav {
+        float: right !important;
+    }
+
+    .nav-menu {
+        margin-top: 0;
+
+        a, span {
+            background-image: none;
+            width: auto;
+        }
+
+        .nav-menu__account {
+            margin-right: 0; // remove gap that lets logo show through on normal pages
+        }
+    }
+
+    #site-logo {
+        @include high-dpi-background-image('images/logo-mobile');
+        background-size: 175px 40px;
+        background-position: 0 0;
+        width: 175px;
+        height: 40px;
+        margin-left: 0; // undo centering
+        top: 10px;
+    }
+
+    .site-footer {
+        display: none;
+    }
+}
+
+.big-green-banner {
+    text-transform: none;
+    text-align: right;
+    font-weight: bold;
+    color: $color-cmc-blue;
+    padding-right: 4em; // 2em (44px) for arrow icon, plus 1em gutter either side
+
+    @include high-dpi-background-image('images/click-map-arrow');
+    background-size: 66px 44px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
