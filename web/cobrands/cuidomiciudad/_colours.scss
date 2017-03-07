@@ -3,25 +3,33 @@
 // If you are wanting a right-to-left layout, uncomment the following line.
 // $direction: right;
 
+$screen-md-min: 48em;
+$screen-lg-min: 60em;
+
 /* COLOURS */
 
-$primary: gray;
-$primary_b: #000000;
-$primary_text: #222222;
+$color-cmc-blue: #005cb9;
+$color-cmc-yellow: #eed11c;
+$color-cmc-green: #00ad68;
 
-$base_bg: white;
-$base_fg: #000;
+$primary: gray; // border-top on #site-header, background on #postcodeForm, #front_stats, and #front-main on desktop
+$primary_b: #000000; // border on div around the #postcodeForm input
+$primary_text: #222222; // text colour wherever $primary is the background
 
-$map_nav_bg: #eee;
-$nav_fg: #000;
-$nav_fg_hover: $primary;
+$base_bg: white; // background on body and .tablewrapper on desktop
+$base_fg: #000; // text color on body and .tablewrapper on desktop
 
-// Colour used for front page 'how to report a problem' steps
-$col_big_numbers: #ccc;
+$map_nav_bg: #eee; // background for `body.mapppage .nav-wrapper .nav-wrapper-2`
+$nav_fg: #000; // text color for `.nav-menu a` on desktop
+$nav_fg_hover: $primary; // hover text color for `.nav-menu a`
 
-$col_click_map: gray;
+$col_big_numbers: #ccc; // text color for ol.big-numbers list item counters on homepage
 
-$col_fixed_label: #00BD08;
-$col_fixed_label_dark: #4B8304;
+$col_click_map: gray; // background for .big-green-banner on map page
 
-$front_main_background: white;
+$col_fixed_label: #00BD08; // background for `.banner p#fixed`
+$col_fixed_label_dark: #4B8304; // border color for folded corner on `.banner p#fixed`
+
+$body-font: Quicksand, "Calibri", "Gill Sans", "Gill Sans MT", sans-serif;
+$meta-font: $body-font;
+$heading-font: $body-font;

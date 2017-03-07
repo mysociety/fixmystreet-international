@@ -1,0 +1,13 @@
+[% PROCESS 'front/javascript.html' %]
+
+[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
+
+[% IF error %]
+    <p class="form-error">[% error %]</p>
+[% END %]
+
+<div class="tablewrapper">
+    <p>Here is some homepage content!</p>
+</div>
+
+[% INCLUDE 'footer.html' %]

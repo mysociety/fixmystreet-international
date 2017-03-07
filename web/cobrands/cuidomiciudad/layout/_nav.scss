@@ -1,0 +1,85 @@
+.nav-menu {
+    display: block; // unflexbox
+    padding: 0;
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+
+    li {
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        float: none;
+        vertical-align: middle;
+    }
+
+    a, span {
+        display: inline-block;
+        border: none;
+        border-radius: 0;
+        color: inherit;
+        font-size: 1em;
+        line-height: 1.2em;
+        width: 7.5em;
+    }
+
+    a:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+.nav-menu__account {
+    margin-right: 220px;
+}
+
+.nav-wrapper {
+    .nav-wrapper-2 {
+        border-top: none;
+    }
+}
+
+// Don't need this padding-left now that the nav is all centre aligned.
+#main-nav {
+    padding-left: 0 !important;
+    float: none !important;
+}
+
+// On wide screens, the logo gets bigger and the nav items get icons.
+@media (min-width: $screen-lg-min) {
+    .nav-menu {
+        margin-top: 2em;
+
+        li {
+            vertical-align: top;
+        }
+
+        a, span {
+            padding-top: 50px; // make room for the icon
+            background-size: 40px 40px;
+            background-repeat: no-repeat;
+            background-position: 50% 0%;
+            width: 9em;
+        }
+
+        .nav-menu__report {
+            @include high-dpi-background-image('images/nav-report');
+        }
+
+        .nav-menu__account {
+            @include high-dpi-background-image('images/nav-account');
+            margin-right: 360px; // make room for the wider logo
+        }
+
+        .nav-menu__reports {
+            @include high-dpi-background-image('images/nav-reports');
+        }
+
+        .nav-menu__help {
+            @include high-dpi-background-image('images/nav-help');
+        }
+    }
+
+    // TODO: bigger logo in layout/_header.scss
+}

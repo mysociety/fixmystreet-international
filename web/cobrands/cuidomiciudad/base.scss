@@ -2,8 +2,10 @@
 @import "./_colours";
 @import "../sass/mixins";
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
 @import "../sass/base";
 
-.nav-menu--mysoc {
-  display: none;
-}
+@import "./base/_header";
+@import "./base/_nav";
+@import "./base/_content";
