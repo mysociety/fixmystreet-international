@@ -1,0 +1,6 @@
+.container {
+    @include box-sizing(border-box);
+    width: auto;
+    max-width: 60em;
+    padding: 0 1em;
+}

@@ -1,0 +1,6 @@
+.site-footer__row {
+    & > * {
+        width: 50%;
+        float: left;
+    }
+}

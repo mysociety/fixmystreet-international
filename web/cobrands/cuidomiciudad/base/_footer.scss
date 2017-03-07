@@ -1,0 +1,45 @@
+.site-footer {
+    padding-top: 2em;
+}
+
+.site-footer__logo {
+    display: block;
+    width: 175px;
+    height: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    margin: 0 0 1em 0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 175px 40px;
+    @include high-dpi-background-image('images/logo-footer');
+}
+
+.site-footer__row {
+    @include clearfix();
+    margin: 0 -1em;
+
+    & > * {
+        @include box-sizing(border-box);
+        width: 100%;
+        padding: 0 1em;
+    }
+}
+
+.site-footer__links {
+    ul {
+        @include list-reset-soft();
+    }
+}
+
+.site-footer__supporters {
+    border-top: 1px solid #fff;
+    padding-top: 2em;
+    margin-top: 2em;
+
+    & > * {
+        display: block;
+        width: 100%;
+        margin: 0 0 1em 0;
+    }
+}
