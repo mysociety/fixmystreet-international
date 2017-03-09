@@ -6,8 +6,53 @@
     <p class="form-error">[% error %]</p>
 [% END %]
 
-<div class="tablewrapper">
-    <p>Here is some homepage content!</p>
+</div>[%# close div.content %]
+</div>[%# close div.container %]
+
+<div class="frontpage-hero" id="busca">
+    <div class="container">
+        <h1>Localiza tu problema, descríbelo, y lo hacemos llegar donde corresponde.</h1>
+        <a href="#como-funciona" class="btn">Cómo Funciona</a>
+    </div>
 </div>
+
+<div class="frontpage-search">
+    <div class="container">
+        <form action="[% c.uri_for('/around') %]" method="get" name="postcodeForm" id="postcodeForm">
+            <label for="pc">Busca tu calle</label>
+            <div>
+                <input type="text" name="pc" value="[% pc | html %]" id="pc" size="10" maxlength="200" placeholder="[% tprintf(loc('e.g. ‘%s’ or ‘%s’'), c.cobrand.example_places) %]">
+                <input type="submit" value="[% loc('Go') %]" id="sub">
+            </div>
+
+            [% IF partial_token %]
+                <input type="hidden" name="partial" value="[% partial_token.token %]">
+            [% END %]
+
+            [% IF c.user_exists AND c.user.categories.size %]
+              <input type="hidden" name="filter_category" value="[% c.user.categories.join(",") | html %]">
+            [% END %]
+        </form>
+    </div>
+</div>
+
+<div class="frontpage-types">
+    <div class="container">
+        <h2>¿Que tipo de problemas pudeo reportar?</h2>
+        <p>(Icons will go here)</p>
+    </div>
+</div>
+
+<div class="frontpage-steps" id="como-funciona">
+    <div class="container">
+        <h2>¿Como reportar un problema?</h2>
+        <p>(Icons will go here)</p>
+        <a href="#busca" class="btn">Haz Un Reporte</a>
+    </div>
+</div>
+
+[%# open two divs for footer to close %]
+<div class="hideme">
+<div>
 
 [% INCLUDE 'footer.html' %]
