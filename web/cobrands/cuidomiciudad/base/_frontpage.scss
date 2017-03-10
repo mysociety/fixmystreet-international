@@ -83,6 +83,22 @@ body.frontpage {
         top: 0;
         right: 0;
         bottom: 0;
+        display: block;
+        overflow: hidden;
+        width: 0;
+        padding: 0 0 0 50px;
+        border-radius: 4px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+
+        background-color: transparent;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        @include high-dpi-background-image('images/home-search');
     }
 }
 
