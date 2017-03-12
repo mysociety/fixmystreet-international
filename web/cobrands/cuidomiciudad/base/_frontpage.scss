@@ -109,6 +109,30 @@ body.frontpage {
     padding-top: 5em; // make room for the search box
 }
 
+.frontpage-types__row {
+    margin: 0 -1em;
+
+    @include flex-container();
+    @include flex-wrap(wrap);
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.frontpage-types__col {
+    padding: 1em;
+    width: 150px;
+
+    h3 {
+        font-weight: bold;
+
+        small {
+            font-style: inherit;
+            font-weight: normal;
+            display: block;
+        }
+    }
+}
+
 .frontpage-steps {
     background-color: #eee; // TODO: streetmap background image
     color: $color-cmc-blue;
