@@ -6,15 +6,21 @@
     <p class="form-error">[% error %]</p>
 [% END %]
 
+[% IF location_error %]
+    <p class="form-error">[% location_error %]</p>
+[% END %]
+
 </div>[%# close div.content %]
 </div>[%# close div.container %]
 
+[% IF NOT possible_location_matches AND NOT partial_token AND NOT location_error %]
 <div class="frontpage-hero" id="busca">
     <div class="container">
         <h1>Localiza tu problema, descríbelo, y lo hacemos llegar donde corresponde.</h1>
         <a href="#como-funciona" class="btn">Cómo Funciona</a>
     </div>
 </div>
+[% END %]
 
 <div class="frontpage-search">
     <div class="container">
@@ -38,6 +44,22 @@
 
 <div class="frontpage-types">
     <div class="container">
+
+      [% IF possible_location_matches %]
+        <h2>[% loc('We found more than one match for that location. We show up to ten matches, please try a different search if yours is not here.') %]</h2>
+        <ul class="pc_alternatives">
+            [% FOREACH match IN possible_location_matches %]
+            <li><a href="/around?latitude=[% match.latitude | uri %];longitude=[% match.longitude | uri %]">[% match.address | html %]</a></li>
+            [% END %]
+        </ul>
+
+      [% ELSIF partial_token %]
+        <p>
+            <img align="right" src="[% partial_report.photos.first.url_temp %]" hspace="5">
+            [% loc("Thanks for uploading your photo. We now need to locate your problem, so please enter a nearby street name or postcode in the box above&nbsp;:") %]
+        </p>
+
+      [% ELSE %]
         <h2>¿Que tipo de problemas pudeo reportar?</h2>
         <div class="frontpage-types__row">
             <div class="frontpage-types__col">
@@ -61,6 +83,7 @@
                 <h3>Poda <small>de Areas Verdes</small></h3>
             </div>
         </div>
+      [% END %]
     </div>
 </div>
 
