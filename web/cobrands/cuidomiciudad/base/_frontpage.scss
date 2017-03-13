@@ -75,6 +75,12 @@ body.frontpage {
             position: relative; // so we can position the submit button
             margin-bottom: 0.5em;
         }
+
+        // Margin to fill the space that `a#geolocate_link` will occupy once it's inserted.
+        // (&:last-child will be false once link is inserted after the form – clever!)
+        &:last-child {
+            margin-bottom: 2em;
+        }
     }
 
     input[type="text"] {
