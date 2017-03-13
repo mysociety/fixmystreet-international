@@ -4,3 +4,17 @@
     max-width: 60em;
     padding: 0 1em;
 }
+
+body.mappage {
+    .table-cell > .container {
+        background-color: #fff;
+    }
+}
+
+body.authpage {
+    .table-cell > .container {
+        background-color: #fff;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+}

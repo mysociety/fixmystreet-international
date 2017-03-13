@@ -25,6 +25,11 @@ body {
         min-height: 0;
         padding-bottom: 0;
     }
+
+    body.mappage &,
+    body.authpage & {
+        height: 4.5em;
+    }
 }
 
 // Custom CMC logo - also horizontally centred, rather than left-aligned.
