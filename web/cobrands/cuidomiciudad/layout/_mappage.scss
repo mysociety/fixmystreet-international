@@ -1,0 +1,38 @@
+body.mappage {
+    .nav-wrapper {
+        .nav-wrapper-2 {
+            background-color: transparent;
+        }
+    }
+
+    #main-nav {
+        float: right !important;
+    }
+
+    .nav-menu {
+        margin-top: 0;
+
+        a, span {
+            background-image: none;
+            width: auto;
+        }
+
+        .nav-menu__account {
+            margin-right: 0; // remove gap that lets logo show through on normal pages
+        }
+    }
+
+    #site-logo {
+        @include high-dpi-background-image('images/logo-mobile');
+        background-size: 175px 40px;
+        background-position: 0 0;
+        width: 175px;
+        height: 40px;
+        margin-left: 0; // undo centering
+        top: 10px;
+    }
+
+    .site-footer {
+        display: none;
+    }
+}

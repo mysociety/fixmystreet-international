@@ -1,0 +1,10 @@
+// Not much to override here, because the mobile map page is so simple already.
+// (No header, no nav, no sidebar. Just "Place pin on map" and reporting form.)
+
+.mobile-reporting-map {
+    .site-footer {
+        .container {
+            padding: 0 1em; // override `padding: 0` on `.mobile-reporting-map .container`
+        }
+    }
+}
