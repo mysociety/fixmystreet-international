@@ -55,6 +55,16 @@ body.frontpage #site-logo {
         height: 8em;
     }
 
+    body.twothirdswidthpage {
+        .content {
+            .sticky-sidebar {
+                aside {
+                    top: 8em;
+                }
+            }
+        }
+    }
+
     #site-logo,
     body.frontpage #site-logo {
         @include high-dpi-background-image('images/logo');
