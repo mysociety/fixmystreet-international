@@ -72,6 +72,10 @@
             margin-right: 360px; // make room for the wider logo
         }
 
+        .nav-menu__account--signed-in {
+            @include high-dpi-background-image('images/nav-signed-in');
+        }
+
         .nav-menu__reports {
             @include high-dpi-background-image('images/nav-reports');
         }
@@ -79,7 +83,9 @@
         .nav-menu__help {
             @include high-dpi-background-image('images/nav-help');
         }
-    }
 
-    // TODO: bigger logo in layout/_header.scss
+        .nav-menu__shortlist {
+            @include high-dpi-background-image('images/nav-shortlist');
+        }
+    }
 }

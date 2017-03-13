@@ -17,16 +17,28 @@
                     <p>Cuido mi ciudad es una plataforma colaborativa donde los ciudadanos cumplen un rol central en el cuidado de la ciudad. Es el canal más efectivo para poner un reporte en nuestra circunscripción para hacerlo llegar a las manos correspondientes de su solución. Es un espacio para los vecinos y vecinas discutir y proponer soluciones a los problemas locales que nos afectan. </p>
                 </div>
                 <div class="site-footer__links">
+                  [%~ IF c.user_exists ~%]
+                    [%~ IF c.cobrand.admin_allow_user(c.user) OR c.user.has_body_permission_to('planned_reports') ~%]
+                      <ul>
+                        [%~ IF c.cobrand.admin_allow_user(c.user) ~%]
+                          <li><a href="/admin">[% loc('Admin') %]</a></li>
+                        [%~ END ~%]
+                        [%~ IF c.user.has_body_permission_to('planned_reports') ~%]
+                          <li><a href="/faq">[% loc('Help') %]</a></li>
+                        [%~ END ~%]
+                      </ul>
+                    [%~ END ~%]
+                  [%~ END ~%]
                     <ul>
-                        <li><a href="#">Terminos de Servicio</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="/about/privacy">Terminos de Servicio</a></li>
+                        <li><a href="/about/privacy">Privacidad</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
                     </ul>
                     <ul>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Facebook</a></li>
                         <li><a href="#">RSS</a></li>
-                        <li><a href="#">Mail</a></li>
+                        <li><a href="/contact">Mail</a></li>
                     </ul>
                 </div>
             </div>
