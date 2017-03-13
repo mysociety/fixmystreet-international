@@ -1,6 +1,16 @@
 // Not much to override here, because the mobile map page is so simple already.
 // (No header, no nav, no sidebar. Just "Place pin on map" and reporting form.)
 
+.mappage {
+    .table-cell > .container {
+        background-color: #fff;
+    }
+
+    #site-header {
+        height: 4.5em; // down from 5em
+    }
+}
+
 .mobile-reporting-map {
     .site-footer {
         .container {
