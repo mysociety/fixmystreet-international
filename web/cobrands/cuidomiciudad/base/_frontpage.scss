@@ -111,9 +111,11 @@ body.frontpage {
 
 .frontpage-types__row {
     margin: 0 -1em;
+    text-align: center;
 
     @include flex-container();
     @include flex-wrap(wrap);
+    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
 }
@@ -140,5 +142,32 @@ body.frontpage {
     .btn {
         background: $color-cmc-yellow;
         border: none;
+    }
+}
+
+.frontpage-steps__row {
+    @extend .frontpage-types__row;
+    margin-bottom: 1em;
+}
+
+.frontpage-steps__col {
+    padding: 1em;
+
+    div {
+        display: table-cell;
+        vertical-align: middle;
+        width: 13em;
+        height: 13em;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    p {
+        margin: 0.5em 0 0 0;
+        line-height: 1.4em;
+    }
+
+    p + p {
+        font-size: 0.7em;
     }
 }
