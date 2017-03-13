@@ -36,3 +36,16 @@ body.mappage {
         display: none;
     }
 }
+
+.big-green-banner {
+    text-transform: none;
+    text-align: right;
+    font-weight: bold;
+    color: $color-cmc-blue;
+    padding-right: 4em; // 2em (44px) for arrow icon, plus 1em gutter either side
+
+    @include high-dpi-background-image('images/click-map-arrow');
+    background-size: 66px 44px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}

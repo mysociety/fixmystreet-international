@@ -12,7 +12,7 @@ $color-cmc-blue: #005cb9;
 $color-cmc-yellow: #eed11c;
 $color-cmc-green: #00ad68;
 
-$primary: gray; // border-top on #site-header, background on #postcodeForm, #front_stats, and #front-main on desktop
+$primary: $color-cmc-blue; // border-top on #site-header, background on #postcodeForm, #front_stats, #front-main on desktop, and border-bottom on various map page sidebar items
 $primary_b: #000000; // border on div around the #postcodeForm input
 $primary_text: #222222; // text colour wherever $primary is the background
 
@@ -25,7 +25,7 @@ $nav_fg_hover: $primary; // hover text color for `.nav-menu a`
 
 $col_big_numbers: #ccc; // text color for ol.big-numbers list item counters on homepage
 
-$col_click_map: gray; // background for .big-green-banner on map page
+$col_click_map: $color-cmc-yellow; // background for .big-green-banner on map page
 
 $col_fixed_label: #00BD08; // background for `.banner p#fixed`
 $col_fixed_label_dark: #4B8304; // border color for folded corner on `.banner p#fixed`
