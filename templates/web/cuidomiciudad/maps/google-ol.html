@@ -1,6 +1,7 @@
 [%
+google_maps_url = "https://maps.googleapis.com/maps/api/js?v=3&key=" _ c.config.GOOGLE_MAPS_JS_API_KEY;
 map_js = [
-    "https://maps.googleapis.com/maps/api/js?v=3",
+    google_maps_url,
     version('/js/OpenLayers/OpenLayers.google.js'),
     version('/js/map-OpenLayers.js'),
     version('/js/map-google-ol.js'),
