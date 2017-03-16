@@ -1,7 +1,8 @@
 [%
 
-email_summary = "A new problem in your area has been reported by a " _ site_name _ " user.";
-email_footer = "If there is a more appropriate email address for messages about " _ category_footer _ ", please let us know. This will help improve the service for local people. We also welcome any other feedback you may have.";
+email_summary = "Un usuario de CuidoMiCiudad reportó un nuevo problema en su área";
+email_footer = "Si hay un email más conveniente para mensajes o reportes sobre " _ category_footer _ ", avisanos o añadelo por favor. Se va mejorar el servicio para
+usuarios locales.  No hesite enviarnos cualquier commentarios porque ayudarnos a mejorar el sitio.";
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -12,17 +13,17 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">New problem in your&nbsp;area</h1>
-  <p style="[% p_style %]">[% missing %][% multiple %]A user of [% site_name %] has submitted the following report
-of a local problem that they believe might require your attention.</p>
+  <h1 style="[% h1_style %]">Nueva problema en su área</h1>
+  <p style="[% p_style %]">[% missing %][% multiple %]Un usuario de [% site_name %] entregó el reporte siguente de un problema local que cree
+requerir su atención.</p>
 
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% button_style %]" href="[% url %]">Show full report</a>
+    <a style="[% button_style %]" href="[% url %]">Ver reporte entero</a>
   </p>
-  <h2 style="[% h2_style %] margin: 30px 0 10px 0">Reported by:</h2>
+  <h2 style="[% h2_style %] margin: 30px 0 10px 0">Reportado por:</h2>
   <table [% table_reset %]>
     <tr>
-      <th style="[% contact_th_style %]">Name</th>
+      <th style="[% contact_th_style %]">Nombre</th>
       <td style="[% contact_td_style %]">[% name | html %]</td>
     </tr>
     <tr>
@@ -31,12 +32,12 @@ of a local problem that they believe might require your attention.</p>
     </tr>
     [%~ IF phone %]
       <tr>
-        <th style="[% contact_th_style %]">Phone</th>
+        <th style="[% contact_th_style %]">Teléfono</th>
         <td style="[% contact_td_style %]"><a href="tel:[% phone | html %]">[% phone | html %]</a></td>
       </tr>
     [%~ END %]
   </table>
-  <p style="[% p_style %] margin-top: 0.5em;">Replies to this message will go directly to [% name | html %], the user who reported the problem.</p>
+  <p style="[% p_style %] margin-top: 0.5em;">Cualquier respuesta a este email irá directamente [% name | html %], el usuario que entregó el problema.</p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html' object = report %]

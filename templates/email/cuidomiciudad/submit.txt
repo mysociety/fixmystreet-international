@@ -1,38 +1,36 @@
-Subject: Problem Report: [% title %]
+Subject: Reportaje de Problema: [% title %]
 
-Dear [% bodies_name %],
+Estimado [% bodies_name %],
 
-[% missing %][% multiple %]A user of
-[% site_name %] has submitted the following report
-of a local problem that they believe might require your attention.
+[% missing %][% multiple %]Un usuario de
+[% site_name %] entregó el reporte siguente de un problema local que cree
+requerir su atención.
 
-[% fuzzy %], or to provide an update on the problem,
-please visit the following link:
-
+[% fuzzy %], o para actualizar el problem por favour haz click en la enlace abajo:
     [% url %]
 
 [% has_photo %]----------
 
-Name: [% name %]
+Nombre: [% name %]
 
 Email: [% email %]
 
-[% phone_line %][% category_line %]Subject: [% title %]
+[% phone_line %][% category_line %]Tema: [% title %]
 
-Details: [% detail %]
+Datos: [% detail %]
 
-Latitude: [% latitude %]
+Latitud: [% latitude %]
 
-Longitude: [% longitude %]
+Longitud: [% longitude %]
 
-View OpenStreetMap of this location: [% osm_url %]
+Ver este lugar en OpenStreetMap: [% osm_url %]
 
 [% closest_address %]----------
 
-Replies to this email will go to the user who submitted the problem.
+Cualquier respuesta a este email irá directamente al usuario que entregó el problema.
 
 [% signature %]
 
-If there is a more appropriate email address for messages about
-[% category_footer %], please let us know. This will help improve the
-service for local people. We also welcome any other feedback you may have.
+Si hay un email más conveniente para mensajes o reportes sobre
+[% category_footer %], avisanos o añadelo por favor. Se va mejorar el servicio para
+usuarios locales.  No hesite enviarnos cualquier commentarios porque ayudarnos a mejorar el sitio.
