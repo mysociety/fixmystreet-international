@@ -1,6 +1,6 @@
 [%
 
-email_summary = "You need to confirm your " _ site_name _ " alert settings before we can send you alerts.";
+email_summary = "Necesita confirmar sus preferencias de alertas de " _ site_name _ " antes que le enviamos alertas.";
 email_columns = 1;
 
 PROCESS '_email_settings.html';
@@ -10,12 +10,12 @@ INCLUDE '_email_top.html';
 %]
 
 <th style="[% td_style %][% only_column_style %]">
-  <h1 style="[% h1_style %]">Please confirm your email alert&nbsp;settings</h1>
-  <p style="[% p_style %]">Please click on the link below to confirm that you want to receive email alerts within your chosen area.</p>
+  <h1 style="[% h1_style %]">Por favor, confirme sus preferencias des alertas de email</h1>
+  <p style="[% p_style %]">Por favor haz clic en el enlace abajo para confirmar que quiere recibir las alertas por email por su zona elegida.</p>
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% button_style %]" href="[% token_url %]">Yes, send me alerts</a>
+    <a style="[% button_style %]" href="[% token_url %]">Sí, envíeme alertas por email</a>
   </p>
-  <p style="[% p_style %]">If you no longer wish to subscribe to alerts in this area, just ignore this email.</p>
+  <p style="[% p_style %]">Si ya no quiere suscribirse a los alertes de esta zona, solo tiene que ignorar ese email</p>
 </th>
 
 [% INCLUDE '_email_bottom.html' %]
