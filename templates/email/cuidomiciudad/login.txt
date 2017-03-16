@@ -1,13 +1,13 @@
-Subject: Your [% site_name %] account details
+Tema: Los detalles de su cuenta de [% site_name %] account
 
-Please click on the link below to confirm your email address.
+Por favor, haz clic en el enlace abajo para confirmarsu dirección email.
 
 [% c.uri_for_action( 'auth/token', token ) %]
 
-Once you've done this, you'll be able to view and manage all reports and
-updates you've made on [% site_name %].
+Cuando lo hizo, sería posible ver y administrar todos los reportes y actualizaciones que hizo en
+[% site_name %].
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+This
+Este email era enviado automaticamente de una dirección de correo electronico no utilizado - por favor no responde a este email.
