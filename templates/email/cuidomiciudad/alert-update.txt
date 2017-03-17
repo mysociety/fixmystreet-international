@@ -1,4 +1,4 @@
-Tema: Nuevas actualizaciones del reporte de [% site_name %] con título: '[% title %]'
+Subject: Nuevas actualizaciones del reporte de [% site_name %] con título: '[% title %]'
 
 Nos pidió que le enviásemos un email cada vez el reporte titulado como [% title %] fur actualizado por
 [% site_name %].

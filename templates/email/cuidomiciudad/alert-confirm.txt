@@ -1,4 +1,4 @@
-Tema: Confirmar sus alertas de [% INCLUDE 'site-name.txt' | trim %] alert
+Subject: Confirmar sus alertas de [% INCLUDE 'site-name.txt' | trim %] alert
 
 Por favor haz clic en el enlace abajo para confirmar sus alertas de [% INCLUDE 'site-name.txt' | trim %].
    [% token_url %]

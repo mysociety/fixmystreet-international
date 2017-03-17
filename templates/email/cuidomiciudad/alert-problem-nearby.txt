@@ -1,4 +1,4 @@
-Tema: Nuevos reportes de [% site_name %]
+Subject: Nuevos reportes de [% site_name %]
 
 Los siguentes nuevos reportes de [% site_name %] fue añadido en la zona especificada:
 you

@@ -1,4 +1,4 @@
-Tema: Mensaje de CuidoMiCiudad: [% subject %]
+Subject: Mensaje de CuidoMiCiudad: [% subject %]
 
 [% message %]
 

@@ -1,4 +1,4 @@
-Tema: Reporte enviado por[% site_name %] título como: [% title %]
+Subject: Reporte enviado por[% site_name %] título como: [% title %]
 
 Buenas días,
 
