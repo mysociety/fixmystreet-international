@@ -1,16 +1,15 @@
-Subject: Confirm your report on [% INCLUDE 'site-name.txt' | trim %]
+Subject: Confirma su reporte sobre [% INCLUDE 'site-name.txt' | trim %]
 
-Hello [% report.name || report.email %],
+Buenas días [% report.name || report.email %],
 
-To confirm the report you have uploaded to [% INCLUDE 'site-name.txt' | trim %]
-via [% report.service %], and to check or add any details, please visit the
-following URL:
+Para confirmar el reporte que ha subido al [% INCLUDE 'site-name.txt' | trim %]
+Por [% report.service %], y para verificar o añadir más detalls, por favor visitar al URL siguiente:
 
 [% token_url %]
 
-Thanks!
+Gracias!
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

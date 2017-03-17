@@ -1,6 +1,6 @@
 [%
 
-email_summary = "You need to confirm your " _ site_name _ " report before it can be sent to ${ report.body }.";
+email_summary = "Necesita confirmar su reporte de " _ site_name _ " antes de que pueda enivado al ${ report.body }.";
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -11,18 +11,17 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Please confirm your&nbsp;report</h1>
-  <p style="[% p_style %]">Please click on the link below to confirm that you want to send your report to [% report.body %].
+  <h1 style="[% h1_style %]">Por favor confirmar su&nbsp;reporte</h1>
+  <p style="[% p_style %]">Por favor haz clic en el enlace abajo para confirmar que quiere enviar su reporte al [% report.body %].
 [% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
-Please note that [% c.cobrand.council_name %] is not responsible for this type
-of problem, so it will instead be sent to [% report.body %].
+Por favor tenga en cuenta que [% c.cobrand.council_name %] no es responsable de ese tipo de reporte
 [% END %]
   </p>
-  <p style="[% p_style %]">Your report will also appear on the [% site_name %] website.</p>
+  <p style="[% p_style %]">Su reporte también aparecerá sober el sitio de [% site_name %].</p>
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% button_style %]" href="[% token_url %]">Yes, send my report</a>
+    <a style="[% button_style %]" href="[% token_url %]">Sí, enviar mí reporte</a>
   </p>
-  <p style="[% p_style %]">If you no longer wish to send this report, please take no further action.</p>
+  <p style="[% p_style %]">Si ya no desea enviar ese reporte, por favor no haga nada.</p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html' object = report %]

@@ -1,6 +1,6 @@
 [%
 
-email_summary = "Confirm your update on " _ site_name;
+email_summary = "Confirma su actualización sobre "'_ site_name;
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -11,13 +11,13 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Please confirm your&nbsp;update</h1>
-  <p style="[% p_style %]">Please click on the link below to confirm your update on [% site_name %].</p>
+  <h1 style="[% h1_style %]">Por favor confirma su actualización</h1>
+  <p style="[% p_style %]">Por favor haz clic abajo para confirmar su actualización por [% site_name %].</p>
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% button_style %]" href="[% token_url %]">Yes, confirm my update</a>
+    <a style="[% button_style %]" href="[% token_url %]">Si confirmar mi actualización</a>
   </p>
   <p style="[% p_style %]">[% INCLUDE 'update-confirm-donotsend.txt' %]</p>
-  <p style="[% p_style %]">If you no longer wish to confirm this update, please take no further action.</p>
+  <p style="[% p_style %]">Si ya no desea confirmar ese actualización, por favor no haga nada.</p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html'

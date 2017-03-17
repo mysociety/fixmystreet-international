@@ -1,7 +1,6 @@
 Subject: Actualizar su dirección de correo electrónico sobre [% site_name %] email
 
-Por favor haz clic en el enlace abajo para confirmar que quiere actualizar su dirección de correo electrónico sobre
-email[% site_name %].
+Por favor haz clic en el enlace abajo para confirmar que quiere actualizar su dirección de correo electrónico sobre [% site_name %].
 
 [% c.uri_for_action( 'auth/token', token ) %]
 

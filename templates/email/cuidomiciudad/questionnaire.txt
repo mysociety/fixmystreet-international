@@ -1,24 +1,22 @@
-Subject: Questionnaire about your [% site_name %] report: '[% report.title %]'
+Subject: Cuestionario sobre su reporte de '[% report.title %]' por [% site_name %] 
+Buenas días [% report.name %],
 
-Hello [% report.name %],
+Hace [% created %], entregó un reporte por [% site_name %].
 
-[% created %] ago, you reported a problem using [% site_name %].
+Los detalles de este reporte están al fondo de este mensaje.
 
-The details of that report are at the end of this email.
-
-To keep [% site_name %] up to date and relevant, we'd appreciate it
-if you could follow the link below and fill in our short questionnaire
-updating the status of your problem:
+Para actualizar [% site_name %], nos alegra muchísimo si pueda
+Seguir el enlace abajo y rellenar un cuestionario para actualizar el estado de su problema
+:
 
     [% url %]
 
 [% signature %]
 
-Your report was as follows:
+Los detalles de su reporte:
 
 [% report.title %]
 
 [% report.detail %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

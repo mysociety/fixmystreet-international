@@ -1,16 +1,15 @@
-Subject: Your update has been logged
+Subject: Su actualización ha sido entregado.
 
-Hello [% update.name %],
+Buenas días [% update.name %],
 
-Your update has been logged on [% site_name %]:
+Su actualización ha sido entregado por [% site_name %]:
 
 [% cobrand.base_url_for_report(problem) %][% problem.url %]#update_[% update.id %]
 
-Your update reads:
+El texto de su actualización es:
 
 [% update.text %]
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

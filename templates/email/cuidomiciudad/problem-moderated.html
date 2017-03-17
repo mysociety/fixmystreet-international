@@ -1,6 +1,6 @@
 [%
 
-email_summary = "Your report on " _ site_name _ " has been moderated.";
+email_summary = "Su reporte por " _ site_name _ " ha dsido moderado";
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -11,17 +11,18 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Your report has been&nbsp;moderated</h1>
+  <h1 style="[% h1_style %]">Su reporte ha sido&nbsp;moderado</h1>
 [% IF types == 'hide' -%]
-  <p style="[% p_style %]">The report has been hidden from the site.</p>
+  <p style="[% p_style %]">El reporte ha sido ocultado.</p>
 [% ELSE %]
-  <p style="[% p_style %]">The following data has been changed: <strong>[% types %]</strong></p>
+  <p style="[% p_style %]">Los datos siguientes han sido cambiados: <strong>[% types %]</strong></p>
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% button_style %]" href="[% report_uri %]">View my report</a>
+    <a style="[% button_style %]" href="[% report_uri %]">Ver mi reporte</a>
   </p>
 [% END -%]
-  <p style="[% p_style %]">If you do not think that this report should have been moderated, you may contact
-the team at <a href="[% report_complain_uri %]">[% report_complain_uri %]</a></p>
+  <p style="[% p_style %]">Si cree que este reporte no debe ser moderado
+, pueda contactar
+al equipo por <a href="[% report_complain_uri %]">[% report_complain_uri %]</a></p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html' object = problem %]
@@ -29,4 +30,4 @@ the team at <a href="[% report_complain_uri %]">[% report_complain_uri %]</a></p
     <p style="[% secondary_p_style %]">[% problem.moderation_original_data.detail | html %]</p>
 [% END %]
 
-[% INCLUDE '_email_bottom.html' %]
+[% INCLUDE '_email_bottom.html' %

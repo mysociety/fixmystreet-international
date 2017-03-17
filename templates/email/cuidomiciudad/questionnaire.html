@@ -1,7 +1,7 @@
 [%
 
 title = report.title | html;
-email_summary = "Got a minute spare? Let us know what happened to your " _ site_name _ " report about ${ title }.";
+email_summary = "¿Tiene algunos minutos? Nos comunica lo que pasó con su reporte de ${ title } por " _ site_name _ ".";
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -12,14 +12,14 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Has your problem been&nbsp;fixed?</h1>
-  <p style="[% p_style %]">[% created %] ago, you reported a problem using [% site_name %].</p>
-  <p style="[% p_style %]">Help us keep [% site_name %] up to date by letting us know whether the problem has been fixed yet:</p>
+  <h1 style="[% h1_style %]">¿Está arreglado su problema?</h1>
+  <p style="[% p_style %]">Hace [% created %], envió un problema por [% site_name %].</p>
+  <p style="[% p_style %]">Ayudanos en actualizar [% site_name %] para comunicarnos si el probema que envió ya está arreglado:</p>
   <p style="margin: 20px auto; text-align: center">
-    <a style="[% fixed_button_style %]" href="[% url %]">Fixed</a>
-    <a style="[% notfixed_button_style %]" href="[% url %]">Not fixed</a>
+    <a style="[% fixed_button_style %]" href="[% url %]">Arreglado</a>
+    <a style="[% notfixed_button_style %]" href="[% url %]">Sin arreglar</a>
   </p>
-  <p style="[% p_style %]">Thank you! Your feedback is really valuable.</p>
+  <p style="[% p_style %]">Gracias! Sus comentarios son muy importantes.</p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html' object = report %]

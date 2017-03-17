@@ -1,27 +1,26 @@
-Subject: Your report has been logged: [% report.title %]
+Subject: Su reporte ha sido entregado :[% report.title %]
 
-Hello [% report.name %],
+Buenas días [% report.name %],
 
-Your report to [% report.body %] has been logged on [% site_name %].
+Su reporte al [% report.body %] ha sido entregado por [% site_name %].
 
 [% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
-Please note that [% c.cobrand.council_name %] is not responsible for this type
-of report, so it will instead be sent to [% report.body %].
+Por favor tenga en cuenta que [% c.cobrand.council_name %] no es responsable de ese tipo de reporte.
 [% END %]
 
-It is available to view at:
+Es posible verlo en:
 
 [% cobrand.base_url_for_report(report) %][% report.url %]
 
-Your report has the title:
+Tu reporte tiene el sujeto:
 
 [% report.title %]
 
-And details:
+Y los detalles:
 
 [% report.detail %]
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

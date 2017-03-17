@@ -2,8 +2,8 @@
 
 subject_html = subject | html;
 name = form_name | html;
-email_summary = "&ldquo;" _ subject_html _ "&rdquo; &ndash; Message from " _ name _ " on " _ host;
-email_footer = "Sent via " _ host _ ", IP " _ ip;
+email_summary = "&ldquo;" _ subject_html _ "&rdquo; &ndash; Mensaje de "_ name _ " al " _ host;
+email_footer = "Enviado por " _ host _ ", IP " _ ip;
 email_columns = 1;
 
 PROCESS '_email_settings.html';
@@ -29,8 +29,8 @@ INCLUDE '_email_top.html';
   [%~ IF complaint %]
   <p style="[% secondary_p_style %]">
     [% complaint | html %]
-    - <a href="[% problem_url %]">Report</a>
-    - <a href="[% admin_url %]">Admin</a>
+    - <a href="[% problem_url %]">Reporte</a>
+    - <a href="[% admin_url %]">Administración</a>
   </p>
   [%~ END %]
 </th>

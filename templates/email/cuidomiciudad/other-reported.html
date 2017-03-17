@@ -1,6 +1,6 @@
 [%
 
-email_summary = "Thanks for logging your report";
+email_summary = "Gracias por entregando su reporte";
 email_columns = 2;
 
 PROCESS '_email_settings.html';
@@ -10,15 +10,15 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Your report has been&nbsp;logged</h1>
-  <p style="[% p_style %]">Your report to [% report.body %] has been logged on [% site_name %].
+  <h1 style="[% h1_style %]">Su reporte ha sido entregando</h1>
+  <p style="[% p_style %]">Su reporte al [% report.body %] ha sido entregando por [% site_name %].
 [% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
-Please note that [% c.cobrand.council_name %] is not responsible for this type
-of report, so it will instead be sent to [% report.body %].
+Por favor, tenga en cuanta que el [% c.cobrand.council_name %] no es responsable de ese typo
+de reporte.
 [% END %]
   </p>
   <p style="margin: 20px auto; text-align: center">
-  <a style="[% button_style %]" href="[% cobrand.base_url_for_report(report) %][% report.url %]">View my report</a>
+  <a style="[% button_style %]" href="[% cobrand.base_url_for_report(report) %][% report.url %]">Ver mi reporte</a>
   </p>
   [% end_padded_box %]
 </th>

@@ -1,15 +1,14 @@
-Subject: Confirm your update on [% INCLUDE 'site-name.txt' | trim %]
+Subject: Confirma su actualización por [% INCLUDE 'site-name.txt' | trim %]
 
-Hello [% update.name %],
+Buenas días [% update.name %],
 
-Please click on the link below to confirm your update on [% INCLUDE 'site-name.txt' | trim %]:
+Por favor haz clic en el enlace abajo para confirmar su actualización por [% INCLUDE 'site-name.txt' | trim %]:
 
 [% token_url %]
 
-If your email program does not let you click on this link, copy and paste it
-into your web browser and press return.
+Si su cuenta de email no le permite cliquear el enlace, por favor copiarlo y pegarlo en su navegador.
 
-Your update reads:
+Su actualización dice:
 
 [% update.text %]
 
@@ -17,5 +16,4 @@ Your update reads:
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

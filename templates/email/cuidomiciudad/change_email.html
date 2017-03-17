@@ -1,6 +1,6 @@
 [%
 
-email_summary = "Click this link to change your " _ site_name _ " email address";
+email_summary = "Haz clic en el enlace para cambiar su dirección de correo electrónico sobre " _ site_name _ " email";
 email_columns = 1;
 
 PROCESS '_email_settings.html';
@@ -10,13 +10,12 @@ INCLUDE '_email_top.html';
 %]
 
 <th style="[% td_style %][% only_column_style %]">
-  <h1 style="[% h1_style %]">Change your [% site_name %] email&nbsp;address</h1>
-  <p style="[% p_style %]">Please click on the link below to confirm you wish to update your
-email address on [% site_name %].</p>
+  <h1 style="[% h1_style %]">Cambiar su dirección de correo electrónico en [% site_name %]</h1>
+  <p style="[% p_style %]">Haz clic en el enlace para cambiar su dirección de correo electrónico sobre [% site_name %].</p>
   <p style="margin: 20px auto; text-align: center">
     <a style="[% button_style %]" href="[% c.uri_for_action( 'auth/token', token ) %]">Change my email address</a>
   </p>
-  <p style="[% p_style %]">If you no longer wish to change your email address, just ignore this email.</p>
+  <p style="[% p_style %]">Si ya no quiere cambiar su dirección de correo electrónico en CuidoMiCiudad, por favor ignora ese email.</p>
 </th>
 
 [% INCLUDE '_email_bottom.html' %]

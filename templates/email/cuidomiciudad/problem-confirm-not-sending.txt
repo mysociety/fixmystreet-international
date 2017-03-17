@@ -1,31 +1,28 @@
-Subject: Confirm your report on [% site_name %]
+Subject: Confirmar su reporte por [% site_name %]
 
-Hello [% report.name %],
+Buenas días [% report.name %],
 
-Please click on the link below to confirm that you want your report to appear
-on [% site_name %], despite not being sent to the council:
+Por favor haz clic en el enlance abajo para confirmar que quiere que su reporte aparece por
+ [% site_name %], a pesar de no esta enviado al ayuntamiento:
 
 [% token_url %]
 
-If your email program does not let you click on this link, copy and paste it
-into your web browser and press return.
+Si su cuenta de email no le permite cliquear el enlace, por favor copiarlo y pegarlo en su navegador.
 
-Your problem had the title:
+Su reporte tiene el sujeto:
 
 [% report.title %]
 
-And details:
+Y los detalles:
 
 [% report.detail %]
 
-If you no longer wish your report to be displayed on the site, please take no
-further action.
+Si ya no desea publicar ese reporte, por favor no haga nada.
 
-Thank you for supporting [% site_name %].
+Gracias por su apoyo de [% site_name %].
 
 
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

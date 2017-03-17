@@ -1,37 +1,34 @@
-Subject: Your report on [% site_name %] has been moderated
+Subject: Su reporte por [% site_name %] ha sido moderado.
 
-Hello [% user.name %],
+Buenas días [% user.name %],
 
-Your report on [% site_name %] has been moderated.
-
+Su reporte por [% site_name %] ha sido moderado.
 [% IF types == 'hide' -%]
-The report has been hidden from the site.
+El reporte ha sido ocultado.
 [% ELSE %]
-The following data has been changed:
+LLos datos siguientes han sido cambiados:
 
 	[% types %]
 
 [% END -%]
 
-Your report had the title:
+Su reporte tenía el sujeto:
 
 [% problem.moderation_original_data.title %]
 
-And details:
+Y los detalles:
 
 [% problem.moderation_original_data.detail %]
 
 [% UNLESS types == 'hide' %]
-You can see the report at [% report_uri %]
+Puede ver el reporte a [% report_uri %]
 [% END %]
 
-If you do not think that this report should have been moderated, you may contact
-the team at [% report_complain_uri %]
+Si cree que este reporte no debe ser moderado, pueda contactar al equipo por [% report_complain_uri %]
 
-Thank you for submitting a report through [% site_name %].
+Gracias por entregar su reporte por [% site_name %].
 
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

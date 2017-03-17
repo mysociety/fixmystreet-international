@@ -1,34 +1,32 @@
-Subject: Confirm your report on [% site_name %]
+Subject: Confirmar su reporte por [% site_name %]
 
-Hello [% report.name %],
+Buenas días [% report.name %],
 
-Please click on the link below to confirm that you want to send your report to
-[% report.body %]. Note that your report will also appear on the [% site_name %]
-website:
-
+Por favor, haz click el enlace abajo para confirmar que quiere enviar su reporte al 
+[% report.body %]. Tenga en cuenta que su reporte también aparecerá en el sitio de [% site_name %]
+:I!hnhnhd 223
 [% token_url %]
 
-If your email program does not let you click on this link, copy and paste it
-into your web browser and press return.
+
+Si su cuenta de email no le permite cliquear el enlace, por favor copiarlo y pegarlo en su navegador.
 [% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
-Please note that [% c.cobrand.council_name %] is not responsible for this type
-of problem, so it will instead be sent to [% report.body %].
+Por favor tenga en cuenta que el [% c.cobrand.council_name %] no es responsable de ese tipo
+de problema.
 [% END %]
-Your problem had the title:
+Su problema tenía el sujeto:
 
 [% report.title %]
 
-And details:
+Y los detalles:
 
 [% report.detail %]
 
-If you no longer wish to send this report, please take no further action.
+Si ya no desea enviar ese reporte, por favor no haga nada.
 
-Thank you for submitting a report through [% site_name %].
+Gracias por entregando el reporte por [% site_name %].
 
 
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.
