@@ -18,13 +18,16 @@
                 </div>
                 <div class="site-footer__links">
                   [%~ IF c.user_exists ~%]
-                    [%~ IF c.cobrand.admin_allow_user(c.user) OR c.user.has_body_permission_to('planned_reports') ~%]
+                    [%~ IF c.cobrand.admin_allow_user(c.user) OR c.user.has_body_permission_to('planned_reports') OR c.user.from_body ~%]
                       <ul>
                         [%~ IF c.cobrand.admin_allow_user(c.user) ~%]
                           <li><a href="/admin">[% loc('Admin') %]</a></li>
                         [%~ END ~%]
                         [%~ IF c.user.has_body_permission_to('planned_reports') ~%]
-                          <li><a href="/faq">[% loc('Help') %]</a></li>
+                          <li><a href="/my/planned">[% loc('Shortlist') %]</a></li>
+                        [%~ END ~%]
+                        [%~ IF c.user.from_body ~%]
+                          <li><a href="/dashboard">[% loc('Dashboard') %]</a></li>
                         [%~ END ~%]
                       </ul>
                     [%~ END ~%]
