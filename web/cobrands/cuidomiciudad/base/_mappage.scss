@@ -70,3 +70,11 @@
         }
     }
 }
+
+.item-list--reports__item--selected {
+    background: mix($base_bg, $color-cmc-yellow, 75%);
+
+    a:hover, a:focus, &.hovered a {
+        background: mix($base_bg, $color-cmc-yellow, 75%);
+    }
+}
