@@ -1,25 +1,21 @@
-Subject: [% site_name %] Report Sent: [% title %]
+Subject: Reporte enviado por[% site_name %] título como: [% title %]
 
-Hello,
+Buenas días,
 
-Thank you for using [% site_name %] to submit your report
+Gracias para elegir [% site_name %] para enviar su reporte
 "[% title %]".
 
-This is to confirm that it has now been sent to [% bodies_name %],
-who should respond to you directly.
+Confirmamos que el reporte ya fue enviado al [% bodies_name %],
+que debe responder directamente a usted. 
 
-Your report is also on [% url %], where others may read, comment or
-offer advice.
+También es posible ver su reporte en [% url %],
+donde sea posible para la gente de leer, hacer comentarios o ofrecer consejos.
 
-You should also feel free to add updates to that page, although note that they
+No dude en añadir las actualizaciones a esa página, en recuerda que esas actualizaciones no se envian al ayuntamiento.
 will not be sent to your council.
 
-If you'd like to update your council, please wait for their reply so that you
-can respond to them directly.
+Si quiere enviar una actualización al ayuntamiento, por favor espere su respuesta para que pueda responder directamente.
 
-Good luck in getting your problem fixed.
-
+Ojalá que su problema sea arreglado pronto.
 [% signature %]
-
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.

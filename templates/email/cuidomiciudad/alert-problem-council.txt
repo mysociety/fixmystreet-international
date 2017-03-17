@@ -1,22 +1,20 @@
-Subject: New [% site_name %] reports to [% area_name %]
+Subject: Nuevo reportes de [% site_name %] en [% area_name %]
 
-The following new [% site_name %] reports have been sent to
-[% area_name %]:
+Los siguentes nuevos reportes de [% site_name %] fue añadido en la zona de
+ [% area_name %]:
 
 [% INCLUDE '_email_report_list.txt' %]
 
 [% signature %]
 
 
-Unsubscribe?
+¿Cancelar la suscripción?
 
-You asked us to send you an email when someone makes a new [% site_name %]
-report to [% area_name %]. This is a free service from [% site_name %].
+Nos pidió que le enviásemos un emailcuqndo alguien hace un nueva reporte de [% site_name %]
+en la zona [% area_name %]. Esto es un servicio gratuito de [% site_name %].
 
-If you no longer wish to receive an email whenever there are new reports made to
-[% area_name %], please follow this link:
-
+Si ya 
+no quiere recibir los emails sobre nuevos reportes en la zona [% area_name %], por favor, sigue ese enlace:
 [% unsubscribe_url %]
 
-This email was sent automatically, from an unmonitored email account - so please
-do not reply to it.
+Ese email fue enviado por una dirección de correo electronico no utilizado, por favor no responde.

@@ -1,18 +1,15 @@
-Subject: Confirm your [% INCLUDE 'site-name.txt' | trim %] alert
+Subject: Confirmar sus alertas de [% INCLUDE 'site-name.txt' | trim %] alert
 
-Please click on the link below to confirm your [% INCLUDE 'site-name.txt' | trim %] alert.
+Por favor haz clic en el enlace abajo para confirmar sus alertas de [% INCLUDE 'site-name.txt' | trim %].
+   [% token_url %]
 
-   [% token_url %]
+Si no sea posible cliquear en el enlace, pueda copiarlo y pegarlo en su navegador.
 
-If you can't click the link, copy and paste it to the address bar of your web
-browser.
+Ese confirme que quiere recibir un email tal vez que alguien haz un reporte en su zona elegida con
+[% INCLUDE 'site-name.txt' | trim %].
 
-This confirms that you'd like to receive an email when someone makes a
-[% INCLUDE 'site-name.txt' | trim %] report within your chosen area.
-
-Email alerts are a free service from [% INCLUDE 'site-name.txt' | trim %].
+Alertas por email son un servicio gratis de [% INCLUDE 'site-name.txt' | trim %].
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado automaticamente de una dirección de correo electronico no utilizado, por favor no responde.

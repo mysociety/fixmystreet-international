@@ -1,11 +1,10 @@
-Subject: Updating your [% site_name %] email address
+Subject: Actualizar su dirección de correo electrónico sobre [% site_name %] email
 
-Please click on the link below to confirm you wish to update your
-email address on [% site_name %].
+Por favor haz clic en el enlace abajo para confirmar que quiere actualizar su dirección de correo electrónico sobre
+email[% site_name %].
 
 [% c.uri_for_action( 'auth/token', token ) %]
 
 [% INCLUDE 'signature.txt' %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.

@@ -1,28 +1,22 @@
-Subject: New [% site_name %] updates on report: '[% title %]'
+Subject: Nuevas actualizaciones del reporte de [% site_name %] con título: '[% title %]'
 
-You asked us to send you an email every time an update was made to the
-[% site_name %] report: [% title %].
+Nos pidió que le enviásemos un email cada vez el reporte titulado como [% title %] fur actualizado por
+[% site_name %].
 
-The following updates have been left on this report:
+Se hizó los siguientes actualizaciones al reporte:
 
 [% INCLUDE '_email_comment_list.txt' %]
 
 [% state_message %]
-
-If you would like to view or reply to these updates, please visit the following URL:
-
+Si quiere ver o responder a la actualización, por favor visita al sigenute enlace:
     [% problem_url %]
 
-This email was sent automatically, from an unmonitored email account - so
-please do not reply to it.
-
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.
 [% signature %]
 
+¿Cancelar la suscripción?
 
-Unsubscribe?
+Ahora, le enviamos un email cuando alguien deja una actualización sobre el reporte [% title %] en [% site_name %].
 
-We currently email you whenever someone leaves an update on the
-[% site_name %] report: [% title %].
-
-If you no longer wish to receive an email whenever this report is updated,
-please follow this link: [% unsubscribe_url %]
+Si ya no quiere recibir un email cuando alguien actualiza ese reporte, por favor sigue este enlace:
+[% unsubscribe_url %]
