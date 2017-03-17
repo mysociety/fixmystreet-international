@@ -1,21 +1,16 @@
-Subject: New reports on [% site_name %]
+Tema: Nuevos reportes de [% site_name %] 
 
-The following new reports have been added to [% site_name %]:
+Los siguentes nuevos reportes fue añadido al [% site_name %]:
 
 [% INCLUDE '_email_report_list.txt' %]
 
 [% signature %]
 
+¿Cancelar la suscripción?
 
-Unsubscribe?
-
-You subscribed to receive an email when someone makes a new [% site_name %]
-report. This is a free service from [% site_name %].
-
-If you no longer wish to receive an email whenever there are new [% site_name %]
-reports please follow this link:
-
+Nos pidió que le enviásemos un email cuando alguien hace un nueva reporte en [% site_name %]. Esto es un servicio gratuito de [% site_name %].
+Si ya 
+no quiere recibir los emails cuando hay nuevos reportes, por favor, sigue ese enlace:
 [% unsubscribe_url %]
 
-This email was sent automatically, from an unmonitored email account - so please
-do not reply to it.
+Ese email fue enviado automaticamente por una dirección de correo electronico no utilizado, por favor no responde.Unsubscribe?
