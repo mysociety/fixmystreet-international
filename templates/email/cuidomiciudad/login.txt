@@ -1,4 +1,4 @@
-Tema: Los detalles de su cuenta de [% site_name %] account
+Subject: Los detalles de su cuenta de [% site_name %] account
 
 Por favor, haz clic en el enlace abajo para confirmarsu dirección email.
 
