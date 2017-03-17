@@ -1,4 +1,4 @@
-Subject: FMS message: [% subject %]
+Tema: Mensaje de CuidoMiCiudad: [% subject %]
 
 [% message %]
 
