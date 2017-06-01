@@ -13,23 +13,10 @@ body {
     background-color: #fff;
 }
 
-// Mobile header is taller, to give breathing space around "tall" logo
 #site-header {
     border-top: none;
     background: transparent;
-    height: 5em;
-
-    // No idea why core uses .container to define #site-header height.
-    // It's just confusing matters here, so reset it back to normal.
-    .container {
-        min-height: 0;
-        padding-bottom: 0;
-    }
-
-    body.mappage &,
-    body.authpage & {
-        height: 4.5em;
-    }
+    padding: 0.5em 0 1em 0;
 }
 
 // Custom CMC logo - also horizontally centred, rather than left-aligned.
@@ -37,18 +24,10 @@ body {
     @include high-dpi-background-image('images/logo-mobile');
     background-size: 175px 40px;
     background-position: 0 0;
-    left: 50%;
-    margin-left: (175px * 0.5 * -1);
-}
-
-// Move "three bars" icon down a bit, to visually match the CMC logo baseline.
-#nav-link {
-    top: 0.75em;
-    right: 0.75em;
+    margin: 0 auto;
 }
 
 // Don't need the "report" button in the mobile header.
 #report-cta {
     display: none;
 }
-
