@@ -13,64 +13,33 @@ body {
     background-color: #fff;
 }
 
-// Mobile header is taller, to give breathing space around "tall" logo
 #site-header {
-    border-top: none;
-    background: transparent;
-    height: 6em;
-
-    // No idea why core uses .container to define #site-header height.
-    // It's just confusing matters here, so reset it back to normal.
-    .container {
-        min-height: 0;
-        padding-bottom: 0;
-    }
-}
-
-body.frontpage #site-header,
-body.mappage #site-header,
-body.authpage #site-header {
-    height: 5em;
+    // 4em padding-bottom leaves lots of space for nav item labels to wrap
+    // onto two lines, and still have clear space after the header.
+    padding: 1em 0 4em 0;
 }
 
 // Custom CMC logo - also horizontally centred, rather than left-aligned.
-#site-logo,
-body.frontpage #site-logo {
+#site-logo {
     @include high-dpi-background-image('images/logo-mobile');
     background-size: 175px 40px;
     background-position: 0 0;
-    top: 0.9em;
     left: 50%;
     margin-left: (175px * 0.5 * -1);
     width: 175px;
     height: 40px;
-}
 
-// On wide screens, the logo gets bigger.
-@media (min-width: $screen-lg-min) {
-    #site-header,
-    body.frontpage #site-header,
-    body.mappage #site-header,
-    body.authpage #site-header {
-        height: 8em;
-    }
-
-    body.twothirdswidthpage {
-        .content {
-            .sticky-sidebar {
-                aside {
-                    top: 8em;
-                }
-            }
-        }
-    }
-
-    #site-logo,
-    body.frontpage #site-logo {
+    // On wide screens, the logo gets bigger.
+    @media (min-width: $screen-lg-min) {
         @include high-dpi-background-image('images/logo');
         background-size: 300px 75px;
         margin-left: (300px * 0.5 * -1);
         width: 300px;
         height: 75px;
     }
+}
+
+body.twothirdswidthpage .content .sticky-sidebar aside {
+    // Match the height of #site-header (75px logo plus 5em padding).
+    top: 75px + (5 * 16px);
 }

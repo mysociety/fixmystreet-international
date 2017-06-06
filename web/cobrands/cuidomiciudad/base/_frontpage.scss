@@ -42,11 +42,12 @@ body.frontpage {
 }
 
 .frontpage-hero {
-    padding: 1em 0;
+    padding: 0 0 1em 0;
 
     h1 {
         margin: 0 auto 1em auto;
         max-width: 21em;
+        font-size: 1.75em; // down from default 2em because it's so long!!
         line-height: 1.2em;
     }
 

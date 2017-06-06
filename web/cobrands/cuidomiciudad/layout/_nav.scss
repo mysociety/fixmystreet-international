@@ -1,3 +1,11 @@
+.nav-wrapper {
+    // Nav items are centred, and can get wider than 960px,
+    // so just drop the max-width, we don't need it anyway.
+    .container {
+        max-width: none;
+    }
+}
+
 .nav-menu {
     display: block; // unflexbox
     padding: 0;
@@ -34,16 +42,8 @@
     margin-right: 220px;
 }
 
-.nav-wrapper {
-    .nav-wrapper-2 {
-        border-top: none;
-    }
-}
-
-// Don't need this padding-left now that the nav is all centre aligned.
 #main-nav {
-    padding-left: 0 !important;
-    float: none !important;
+    float: none;
 }
 
 // On wide screens, the logo gets bigger and the nav items get icons.
@@ -60,7 +60,7 @@
             background-size: 40px 40px;
             background-repeat: no-repeat;
             background-position: 50% 0%;
-            width: 9em;
+            width: 8.5em;
         }
 
         .nav-menu__report {

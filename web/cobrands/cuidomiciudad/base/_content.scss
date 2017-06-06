@@ -1,20 +1,19 @@
-.container {
-    @include box-sizing(border-box);
-    width: auto;
-    max-width: 60em;
-    padding: 0 1em;
-}
+// The "main" container on the page (and not the ones
+// in #site-header, .nav-wrapper, or #site-footer).
+.table-cell > .container {
+    background-color: #fff;
+    padding: 1em;
 
-body.mappage {
-    .table-cell > .container {
-        background-color: #fff;
+    // Frontpage doesn't need the "contained" look because the .container
+    // is zero-height by default and only ever contains alerts/errors which
+    // have their own padded / backgrounded wrapper elements.
+    body.frontpage & {
+        background: transparent;
+        padding: 0 1em;
     }
-}
 
-body.authpage {
-    .table-cell > .container {
-        background-color: #fff;
-        padding: 1em;
-        margin-bottom: 2em;
+    // Don't need vertical padding above map on mobile mappage.
+    body.mappage & {
+        padding: 0 1em;
     }
 }

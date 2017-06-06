@@ -20,9 +20,11 @@ $primary_text: #222222; // text colour wherever $primary is the background
 $base_bg: white; // background on body and .tablewrapper on desktop
 $base_fg: #000; // text color on body and .tablewrapper on desktop
 
-$map_nav_bg: #eee; // background for `body.mapppage .nav-wrapper .nav-wrapper-2`
+$map_nav_bg: #eee; // background for `body.mapppage #site-header`
 $nav_fg: #000; // text color for `.nav-menu a` on desktop
 $nav_fg_hover: $primary; // hover text color for `.nav-menu a`
+
+$header-top-border: false;
 
 $col_big_numbers: #ccc; // text color for ol.big-numbers list item counters on homepage
 

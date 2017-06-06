@@ -1,12 +1,19 @@
+// We have to reset a lot of the custom styling applied in layout/_header.scss
+// and layout/_nav.scss, so that the logo and nav are no longer centred.
 body.mappage {
-    .nav-wrapper {
-        .nav-wrapper-2 {
-            background-color: transparent;
+    #site-header {
+        background: transparent; // let body background image show through
+        padding: 0.75em 0;
+        height: auto;
+
+        .container {
+            max-width: none;
         }
     }
 
     #main-nav {
-        float: right !important;
+        float: right;
+        margin-right: 0;
     }
 
     .nav-menu {
@@ -15,6 +22,7 @@ body.mappage {
         a, span {
             background-image: none;
             width: auto;
+            padding: 1.25em 0.75em;
         }
 
         .nav-menu__account {
@@ -28,8 +36,10 @@ body.mappage {
         background-position: 0 0;
         width: 175px;
         height: 40px;
-        margin-left: 0; // undo centering
-        top: 10px;
+
+        // Undo centering.
+        margin-left: 0;
+        left: auto;
     }
 
     .site-footer {
