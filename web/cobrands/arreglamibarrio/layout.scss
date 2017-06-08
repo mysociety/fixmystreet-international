@@ -12,3 +12,13 @@ body.frontpage {
         background: url(logo.png);
     }
 }
+
+body.mappage {
+    #site-header {
+        background-color: #000; // to match edges of logo
+    }
+
+    #site-logo {
+        height: $mappage-header-height - $header-top-border-width;
+    }
+}
