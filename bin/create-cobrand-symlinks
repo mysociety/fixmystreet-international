@@ -49,3 +49,6 @@ cd $WEB_ASSETS_SOURCE_DIR
 echo "Creating symlinks in $(pwd):"
 ln $LN_FLAGS ../../../$WEB_ASSETS_TARGET_DIR/sass .
 ln $LN_FLAGS ../../../$WEB_ASSETS_TARGET_DIR/fixmystreet .
+
+echo "Cleaning up removed cobrands"
+find $PERL_MODULES_TARGET_DIR $WEB_TEMPLATES_TARGET_DIR $EMAIL_TEMPLATES_TARGET_DIR $WEB_ASSETS_TARGET_DIR -depth 1 -type l -exec test ! -e {} \; -delete
