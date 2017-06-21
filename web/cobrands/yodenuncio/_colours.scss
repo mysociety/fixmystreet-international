@@ -1,0 +1,40 @@
+/* LAYOUT */
+
+// If you are wanting a right-to-left layout, uncomment the following line.
+// $direction: right;
+
+$screen-md-min: 48em;
+$screen-lg-min: 60em;
+
+/* COLOURS */
+
+$color-yd-darkblue: #0060bc;
+$color-yd-terracotta: #ff4500;
+$color-yd-cyan: #00acf2;
+$color-yd-green: #6fcd3d;
+$color-yd-orange: #ffae25;
+$color-yd-paleblue: #cfe1f0;
+
+$primary: #ff1493; // border-top on #site-header, background on #postcodeForm, #front_stats, #front-main on desktop, and border-bottom on various map page sidebar items
+$primary_b: #000000; // border on div around the #postcodeForm input
+$primary_text: #222222; // text colour wherever $primary is the background
+
+$base_bg: white; // background on body and .tablewrapper on desktop
+$base_fg: #000; // text color on body and .tablewrapper on desktop
+
+$map_nav_bg: #eee; // background for `body.mapppage #site-header`
+$nav_fg: #000; // text color for `.nav-menu a` on desktop
+$nav_fg_hover: $primary; // hover text color for `.nav-menu a`
+
+$header-top-border: false;
+
+$col_big_numbers: #ccc; // text color for ol.big-numbers list item counters on homepage
+
+$col_click_map: #7cfc00; // background for .big-green-banner on map page
+
+$col_fixed_label: #00BD08; // background for `.banner p#fixed`
+$col_fixed_label_dark: #4B8304; // border color for folded corner on `.banner p#fixed`
+
+$body-font: "Nunito Sans", "Calibri", "Gill Sans", "Gill Sans MT", sans-serif;
+$meta-font: $body-font;
+$heading-font: "Corduroy Regular", "Rockwell", "Courier Bold", "Courier", sans-serif;
