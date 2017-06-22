@@ -1,0 +1,15 @@
+#site-logo {
+    width: 75px;
+    height: 65px; // makes #site-header a bit taller
+    background-position: 0 10px; // visually align *words* in logo closer to centre
+    background-size: 75px 40px;
+    @include high-dpi-background-image('/cobrands/yodenuncio/images/site-logo-small');
+}
+
+#nav-link {
+    right: 10px; // visually compensate for taller #site-header
+}
+
+#report-cta {
+    display: none;
+}

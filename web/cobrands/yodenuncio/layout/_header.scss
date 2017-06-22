@@ -1,0 +1,100 @@
+#site-header,
+.nav-wrapper {
+    .container {
+        padding: 0;
+    }
+}
+
+#site-header {
+    background-color: #fff;
+    border-bottom: $header-border-bottom-width solid $color-yd-paleblue;
+
+    .container {
+        &:after {
+            content: "";
+            display: block;
+            height: $header-border-bottom-width;
+            position: absolute;
+            bottom: $header-border-bottom-width * -1;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, $color-yd-terracotta 0%, $color-yd-terracotta 25%, $color-yd-cyan 25%, $color-yd-cyan 50%, $color-yd-green 50%, $color-yd-green 75%, $color-yd-orange 75%, $color-yd-orange 100%);
+        }
+    }
+}
+
+#site-logo {
+    background-color: $color-yd-darkblue;
+    width: 25%;
+    height: $mappage-header-height;
+    background-position: 50% 40%;
+    background-size: 128px 70px;
+    @include high-dpi-background-image('/cobrands/yodenuncio/images/site-logo-large');
+
+    &:hover {
+        background-color: lighten($color-yd-darkblue, 5%);
+    }
+}
+
+#main-nav {
+    padding: 0 25%; // avoid nav items hiding behind #site-logo and .nav-menu__account
+    float: none;
+    text-align: center;
+}
+
+.nav-menu {
+    float: none;
+    width: 100%;
+    @include flex-container();
+    @include justify-content(space-between);
+
+    li {
+        float: none;
+    }
+
+    // Add a fake list item to balance left and right spacing
+    &:before {
+        content: "";
+        display: block;
+    }
+
+    a, span {
+        color: #999;
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+
+    a:hover {
+        color: $color-yd-darkblue;
+        background: transparent;
+    }
+}
+
+a.nav-menu__account {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: $mappage-header-height;
+    background-color: $color-yd-darkblue;
+    color: #fff;
+    line-height: 100px;
+    padding: 0;
+
+    &:hover {
+        color: #fff;
+        background-color: lighten($color-yd-darkblue, 5%);
+    }
+}
+
+body.mappage {
+    #main-nav {
+        min-height: $mappage-inner-header-height;
+    }
+
+    #site-header,
+    #site-logo,
+    a.nav-menu__account {
+        height: $mappage-inner-header-height;
+    }
+}
