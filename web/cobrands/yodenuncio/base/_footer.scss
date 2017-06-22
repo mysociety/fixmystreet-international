@@ -1,0 +1,23 @@
+.site-footer {
+    padding: 2em 0;
+}
+
+.supporters {
+    @include list-reset-soft();
+    @include flex-container();
+    @include flex-wrap(wrap);
+    @include flex-align(center);
+    @include justify-content(center);
+    text-align: center;
+    margin: 0 -0.5em;
+
+    li {
+        padding: 0.5em;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+    }
+}
