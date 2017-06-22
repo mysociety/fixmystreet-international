@@ -1,0 +1,9 @@
+[%~ INCLUDE navitem uri='/' label='Denuncia' attrs='class="nav-menu__report"' ~%]
+
+[%~ INCLUDE navitem uri='/faq' label='Ayuda' attrs='class="nav-menu__help"' ~%]
+
+[%~ IF c.user_exists ~%]
+    [%~ INCLUDE navitem uri='/my' label='Su cuenta' attrs='class="nav-menu__account nav-menu__account--signed-in"' ~%]
+[%~ ELSE ~%]
+    [%~ INCLUDE navitem uri='/auth' label='Acceso' attrs='class="nav-menu__account"' ~%]
+[%~ END ~%]

@@ -22,8 +22,8 @@ $primary_text: #222222; // text colour wherever $primary is the background
 $base_bg: white; // background on body and .tablewrapper on desktop
 $base_fg: #000; // text color on body and .tablewrapper on desktop
 
-$map_nav_bg: #eee; // background for `body.mapppage #site-header`
-$nav_fg: #000; // text color for `.nav-menu a` on desktop
+$map_nav_bg: $color-yd-darkblue; // background for `#site-header` on mobile, and `body.mapppage #site-header` on desktop
+$nav_fg: #fff; // text color for `#site-header` mobile, and `.nav-menu a` on desktop
 $nav_fg_hover: $primary; // hover text color for `.nav-menu a`
 
 $header-top-border: false;
@@ -38,3 +38,9 @@ $col_fixed_label_dark: #4B8304; // border color for folded corner on `.banner p#
 $body-font: "Nunito Sans", "Calibri", "Gill Sans", "Gill Sans MT", sans-serif;
 $meta-font: $body-font;
 $heading-font: "Corduroy Regular", "Rockwell", "Courier Bold", "Courier", sans-serif;
+
+// This cobrand does some funky arithmetic to add a multicoloured border to
+// the bottom of the mappage header, without disrupting the mappage layout.
+$mappage-header-height: 100px;
+$header-border-bottom-width: 5px;
+$mappage-inner-header-height: $mappage-header-height - $header-border-bottom-width;
