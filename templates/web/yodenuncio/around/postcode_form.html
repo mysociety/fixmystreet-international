@@ -5,38 +5,56 @@
             <strong>Yo Denuncio</strong> es una platforma desarrollada para facilitarte a ti, el ciudadano, la capacidad de reportar eventos que hayan afectado tu seguridad o bienestar de una forma fácil, eficiente y efectiva. <a href="#">Más info</a>
         </p>
 
-        <form method="get" action="/report/new">
-            <fieldset>
+        <form method="get" action="/report/new" class="frontpage__form js-two-stage-frontpage-form">
+            <fieldset class="frontpage__form__category">
                 <legend>Elige tu denuncia</legend>
-                <label>
-                    <input type="radio" name="category" value="Crimen Contra Mi Persona">
-                    <span class="category-button category-button--persona">Crimen Contra Mi Persona</span>
-                </label>
-                <label>
-                    <input type="radio" name="category" value="Abuso de Etica Policial">
-                    <span class="category-button category-button--etica">Abuso de Etica Policial</span>
-                </label>
-                <label>
-                    <input type="radio" name="category" value="Violencia Contra la Mujer">
-                    <span class="category-button category-button--mujer">Violencia Contra la Mujer</span>
-                </label>
-                <label>
-                    <input type="radio" name="category" value="Violencia Domestica Intrafamiliar">
-                    <span class="category-button category-button--domestica">Violencia Domestica Intrafamiliar</span>
-                </label>
+                <div class="frontpage__form__category__buttons">
+                    <label>
+                        <input type="radio" name="category" value="Crimen Contra Mi Persona">
+                        <span class="category-button category-button--persona">
+                            Crimen<br>
+                            Contra Mi<br>
+                            Persona
+                        </span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" value="Abuso de Etica Policial">
+                        <span class="category-button category-button--etica">
+                            Abuso<br>
+                            de Etica<br>
+                            Policial
+                        </span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" value="Violencia Contra la Mujer">
+                        <span class="category-button category-button--mujer">
+                            Violencia<br>
+                            Contra<br>
+                            la Mujer
+                        </span>
+                    </label>
+                    <label>
+                        <input type="radio" name="category" value="Violencia Domestica Intrafamiliar">
+                        <span class="category-button category-button--domestica">
+                            Violencia<br>
+                            Domestica<br>
+                            Intrafamiliar
+                        </span>
+                    </label>
+                </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="frontpage__form__location">
                 <legend>¿Dónde?</legend>
                 <label for="pc">[% loc('Enter a nearby street name and area') %]</label>
-                <input type="text" name="pc" placeholder="[% tprintf(loc('e.g. ‘%s’ or ‘%s’'), c.cobrand.example_places) %]">
+                <input type="text" class="form-control" name="pc" placeholder="[% tprintf(loc('e.g. ‘%s’ or ‘%s’'), c.cobrand.example_places) %]">
+                <input type="submit" value="[% loc('Go') %]">
             </fieldset>
 
             [% IF partial_token %]
                 <input type="hidden" name="partial" value="[% partial_token.token %]">
             [% END %]
 
-            <input type="submit" value="[% loc('Go') %]" id="sub">
         </form>
     </div>
 </div>
