@@ -1,3 +1,57 @@
 #front-main {
     background-color: $color-yd-paleblue;
+    padding: 2em 0 1em 0;
+
+    .lead {
+        font-size: 1.5em;
+    }
+}
+
+.frontpage__form__category {
+    label {
+        width: 25%;
+    }
+}
+
+.frontpage__form__location {
+    margin: 2em 0;
+}
+
+.js-two-stage-frontpage-form {
+    margin-bottom: -4em;
+
+    fieldset:last-child {
+        padding-bottom: 4em;
+    }
+}
+
+body.frontpage {
+    .content {
+        padding: 0;
+        background: transparent;
+        margin-top: 3em; // bit of extra space for the overlapping buttons
+    }
+}
+
+.frontpage__how-it-works,
+.frontpage__categories {
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+.frontpage__how-it-works {
+    ol {
+        font-size: 1.3em;
+    }
+}
+
+.frontpage__categories__primary {
+    & > li {
+        width: 25%;
+
+        &:nth-child(2n+1) {
+            clear: none;
+        }
+    }
 }

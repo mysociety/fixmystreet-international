@@ -1,3 +1,337 @@
 #front-main {
     background-color: $color-yd-paleblue;
+    margin: 0; // down from 1em
+    padding: 1em 0;
+
+    .lead {
+        color: mix(#000, $color-yd-paleblue, 50%);
+        margin: 0 auto 1em auto;
+        max-width: 33em;
+        font-size: 1.1em;
+        line-height: 1.3em;
+
+        @media (min-width: 30em) {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.frontpage__form {
+    margin-top: 1em;
+}
+
+.frontpage__form__category,
+.frontpage__form__location {
+    legend {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $color-yd-darkblue;
+        width: 100%;
+        padding-bottom: 2em;
+        margin-bottom: 1em;
+        background-position: 50% 100%;
+        background-size: 110px 20px;
+        background-repeat: no-repeat;
+        @include svg-background-image('/cobrands/yodenuncio/images/front-down-arrow');
+    }
+
+    label {
+        font-weight: normal;
+        margin: 0;
+    }
+}
+
+.frontpage__form__category__buttons {
+    @include clearfix();
+    font-size: 14px;
+    margin: 0 -0.5em;
+
+    label {
+        @include box-sizing(border-box);
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 0.5em;
+        margin: 0;
+        text-align: left;
+
+        @media (min-width: 30em) {
+            width: 50%;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            left: -9999px;
+        }
+    }
+}
+
+.category-button {
+    display: block;
+    border-radius: 4px;
+    color: #fff;
+    font-family: $heading-font;
+    padding: 1.5em 1em 1.5em 100px;
+    line-height: 1.1em;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 90px 180px;
+
+    :checked + & {
+        box-shadow: 0 0 0 4px #fff;
+    }
+}
+
+.category-button--persona {
+    background-color: $color-yd-terracotta;
+    text-shadow: 0 0 5px darken($color-yd-terracotta, 10%);
+    @include svg-background-image('/cobrands/yodenuncio/images/megaphone-persona');
+
+    &:hover,
+    &:focus {
+        background-color: lighten($color-yd-terracotta, 5%);
+    }
+
+    :checked + & {
+        background-color: darken($color-yd-terracotta, 5%);
+    }
+}
+
+.category-button--etica {
+    background-color: $color-yd-cyan;
+    text-shadow: 0 0 5px darken($color-yd-cyan, 10%);
+    @include svg-background-image('/cobrands/yodenuncio/images/megaphone-etica');
+
+    &:hover,
+    &:focus {
+        background-color: lighten($color-yd-cyan, 5%);
+    }
+
+    :checked + & {
+        background-color: darken($color-yd-cyan, 5%);
+    }
+}
+
+.category-button--mujer {
+    background-color: $color-yd-green;
+    text-shadow: 0 0 5px darken($color-yd-green, 10%);
+    @include svg-background-image('/cobrands/yodenuncio/images/megaphone-mujer');
+
+    &:hover,
+    &:focus {
+        background-color: lighten($color-yd-green, 5%);
+    }
+
+    :checked + & {
+        background-color: darken($color-yd-green, 5%);
+    }
+}
+
+.category-button--domestica {
+    background-color: $color-yd-orange;
+    text-shadow: 0 0 5px darken($color-yd-orange, 10%);
+    @include svg-background-image('/cobrands/yodenuncio/images/megaphone-domestica');
+
+    &:hover,
+    &:focus {
+        background-color: lighten($color-yd-orange, 5%);
+    }
+
+    :checked + & {
+        background-color: darken($color-yd-orange, 5%);
+    }
+}
+
+.frontpage__form__location {
+    margin: 1em 0;
+
+    label {
+        margin-bottom: 0.5em;
+    }
+
+    input[type="text"] {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+    }
+
+    input[type="submit"] {
+        display: inline-block;
+        margin: 0.5em 0 0 0;
+        padding: 0.75em 1.5em;
+        font-size: 1em;
+        line-height: 1em;
+        border-radius: 4px;
+        background: $color-yd-darkblue;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        vertical-align: top;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($color-yd-darkblue, 5%);
+        }
+    }
+
+    @media (min-width: 30em) {
+        input[type="text"] {
+            width: 24em;
+            max-width: 75%;
+        }
+
+        input[type="submit"] {
+            margin: 0 0 0 0.5em;
+        }
+    }
+}
+
+.frontpage__how-it-works,
+.frontpage__categories {
+    padding: 2em 0;
+
+    h2 {
+        text-align: center;
+        color: $color-yd-darkblue;
+        font-size: 2em;
+        margin: 0 0 0.5em 0;
+    }
+}
+
+.frontpage__categories {
+    color: #fff;
+    background-color: $color-yd-darkblue;
+
+    h2 {
+        color: inherit;
+    }
+}
+
+.frontpage__how-it-works {
+    ol {
+        margin: 0 auto;
+        max-width: 40em;
+
+        li {
+            list-style: none;
+            counter-increment: how-to-counter;
+            position: relative;
+            margin: 0 0 0 3em;
+            padding: 1em 0;
+            line-height: 1.3em;
+            border-bottom: 1px solid $color-yd-terracotta;
+            color: #666;
+
+            &:nth-child(2) {
+                border-bottom-color: $color-yd-cyan;
+            }
+
+            &:nth-child(3) {
+                border-bottom-color: $color-yd-green;
+            }
+
+            &:nth-child(4) {
+                border-bottom-color: $color-yd-orange;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:before {
+                content: counter(how-to-counter);
+                display: block;
+                width: 1.6em;
+                line-height: 1.6em;
+                position: absolute;
+                left: -3em;
+                top: 50%;
+                margin-top: (1.6em * 0.5 * -1);
+                background-color: $color-yd-darkblue;
+                color: #fff;
+                text-align: center;
+                border-radius: 100%;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.frontpage__categories {
+    ul {
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        margin: 0;
+    }
+}
+
+.frontpage__categories__primary {
+    @include clearfix();
+    margin: 0 -0.5em;
+
+    & > li {
+        @include box-sizing(border-box);
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 0.5em;
+
+        @media (min-width: 30em) {
+            width: 50%;
+
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
+    }
+
+    h3 {
+        margin: 0 0 0.5em 0;
+        padding: 0.5em;
+        font-family: $heading-font;
+        border-radius: 4px;
+    }
+
+    li:nth-child(1) {
+        h3 {
+            background-color: $color-yd-terracotta;
+            text-shadow: 0 0 5px darken($color-yd-terracotta, 10%);
+        }
+    }
+
+    li:nth-child(2) {
+        h3 {
+            background-color: $color-yd-cyan;
+            text-shadow: 0 0 5px darken($color-yd-cyan, 10%);
+        }
+    }
+
+    li:nth-child(3) {
+        h3 {
+            background-color: $color-yd-green;
+            text-shadow: 0 0 5px darken($color-yd-green, 10%);
+        }
+    }
+
+    li:nth-child(4) {
+        h3 {
+            background-color: $color-yd-orange;
+            text-shadow: 0 0 5px darken($color-yd-orange, 10%);
+        }
+    }
+}
+
+.frontpage__categories__secondary {
+    color: mix(#fff, $color-yd-darkblue, 70%);
+
+    & > li {
+        padding: 0.5em 0;
+
+        & + li {
+            border-top: 1px solid mix(#fff, $color-yd-darkblue, 50%);
+        }
+    }
 }
