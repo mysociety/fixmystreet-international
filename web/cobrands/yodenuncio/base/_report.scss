@@ -1,0 +1,18 @@
+.box-warning {
+    background-color: mix(#fff, $color-yd-terracotta, 70%);
+}
+
+.problem-form-header {
+    margin: -1em -1em 0 -1em;
+    background: $color-yd-orange;
+    padding: 1em;
+    color: $color-yd-darkblue;
+}
+
+// TODO: Icon?
+.change_location {
+    border: none;
+    padding-left: 0;
+    background: transparent;
+    margin-bottom: 0;
+}
