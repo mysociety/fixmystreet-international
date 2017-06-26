@@ -98,3 +98,19 @@ body.mappage {
         height: $mappage-inner-header-height;
     }
 }
+
+.privacy-assurance {
+    p {
+        margin-right: 10em;
+    }
+}
+
+.privacy-assurance__close {
+    top: 50%;
+    margin-top: -32px;
+    height: auto;
+    background-position: 16px 50%;
+    width: auto;
+    padding: 0 1em 0 64px;
+    line-height: 64px;
+}
