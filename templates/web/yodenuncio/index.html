@@ -1,6 +1,7 @@
 [% PROCESS 'front/javascript.html' %]
 
 [% pre_container_extra = PROCESS 'around/postcode_form.html' %]
+[% include_privacy_assurance = 1 %]
 [% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
 
 [% IF error %]
