@@ -16,4 +16,6 @@ sub admin_allow_user {
     return 1 if $user->is_superuser || $user->from_body;
 }
 
+sub skip_around_page { 1 }
+
 1;
