@@ -1,3 +1,6 @@
+// We do our own #geolocate_link setup in dom ready.
+delete fixmystreet.set_up.report_geolocation;
+
 $(function(){
     $('.js-two-stage-frontpage-form').each(function(){
         var $form = $(this);
@@ -14,6 +17,29 @@ $(function(){
         });
 
         $fieldsets.eq(1).hide();
+    });
+
+    $('.js-geolocation-option').each(function(){
+        if (!geo_position_js.init()) {
+            return;
+        }
+
+        var $fieldset = $(this);
+        var $form = $fieldset.parent();
+        var $link = $('<a>');
+
+        $link.attr('id', 'geolocate_link');
+        $link.text(translation_strings.geolocate);
+        $link.wrap('<p>').parent().appendTo($fieldset);
+
+        fixmystreet.geolocate.setup(function(pos) {
+            var params = {
+                latitude: pos.coords.latitude,
+                longitude: pos.coords.longitude,
+                category: $form.find('[name="category"]:checked').val()
+            }
+            location.href = '/report/new?' + $.param(params);
+        });
     });
 
     var $privacyAssurance = $('.js-privacy-assurance')
