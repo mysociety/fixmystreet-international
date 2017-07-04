@@ -52,4 +52,17 @@ $(function(){
             $close.appendTo( $privacyAssurance.children('.container') );
         }
     }
+
+    var setProblemFormColourscheme = function setProblemFormColourscheme(){
+        $('#problem_form').attr('data-category', $('#form_category').val());
+    };
+
+    var $problemForm = $('#problem_form');
+    if($problemForm.length){
+        setProblemFormColourscheme();
+
+        $problemForm.on("change.category", "select#form_category", function(){
+            setProblemFormColourscheme();
+        });
+    }
 });
