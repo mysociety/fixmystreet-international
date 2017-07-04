@@ -9,10 +9,37 @@
     color: $color-yd-darkblue;
 }
 
+.report-form-privacy-reminder {
+    margin: 1em -1em;
+    padding: 1em;
+    background-color: #eee;
+
+    h2 {
+        font-family: inherit;
+        font-size: 1em;
+        text-transform: none;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.8em;
+        margin: 0.5em 0 0 0;
+    }
+}
+
 // TODO: Icon?
 .change_location {
     border: none;
     padding-left: 0;
     background: transparent;
     margin-bottom: 0;
+}
+
+.extra-category-questions {
+    background: transparent;
+
+    &:before {
+        display: none;
+    }
 }
