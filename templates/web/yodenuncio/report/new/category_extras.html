@@ -1,0 +1,16 @@
+[% DEFAULT list_of_names = bodies_to_list_names %]
+
+<div id="category_meta">
+  [%- IF category_extras.$category.size %]
+    <div class="report-form-privacy-reminder">
+        <h2>
+            Detalles Privados
+        </h2>
+        <p>
+            Tus detalles privados seran enviados a la Policía Nacional y el
+            Ministerio Público pero nunca será publicada sin autorización.
+        </p>
+    </div>
+    [% INCLUDE 'report/new/category_extras_fields.html' %]
+  [%- END %]
+</div>
