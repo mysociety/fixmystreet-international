@@ -14,6 +14,35 @@
             font-size: 1.2em;
         }
     }
+
+    a#geolocate_link {
+        font-size: 1em;
+        font-family: inherit;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: transparent url(/cobrands/yodenuncio/images/geolocation.png) no-repeat 0 0;
+            background-size: 16px 16px;
+            margin-#{$right}: 0.5em;
+            vertical-align: -0.2em; // vertically centre icon in button
+
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+                background-image: url(/cobrands/yodenuncio/images/geolocation@2x.png);
+            }
+
+            @media all {
+                background-image: url(/cobrands/yodenuncio/images/geolocation.svg), none;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
 }
 
 .frontpage__form {
