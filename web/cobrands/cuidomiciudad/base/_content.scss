@@ -16,4 +16,18 @@
     body.mappage & {
         padding: 0 1em;
     }
+
+    table.nicetable {
+        tr.a {
+            background: transparent;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f6f6f6;
+        };
+    }
+
+    tr.table-row__child_area .title {
+        padding-left: 1em;
+    }
 }
