@@ -1,4 +1,5 @@
 Subject: Cuestionario sobre su reporte de '[% report.title %]' por [% site_name %] 
+
 Buenas días [% report.name %],
 
 Hace [% created %], entregó un reporte por [% site_name %].
