@@ -18,4 +18,6 @@ sub admin_allow_user {
 
 sub skip_around_page { 1 }
 
+sub send_questionnaires { 0 }
+
 1;
