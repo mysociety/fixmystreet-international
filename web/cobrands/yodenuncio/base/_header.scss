@@ -3,7 +3,7 @@
     height: 65px; // makes #site-header a bit taller
     background-position: 0 10px; // visually align *words* in logo closer to centre
     background-size: 75px 40px;
-    @include high-dpi-background-image('/cobrands/yodenuncio/images/site-logo-small');
+    @include svg-background-image('/cobrands/yodenuncio/images/site-logo-small');
 }
 
 #nav-link {
@@ -40,5 +40,5 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 32px 32px;
-    @include high-dpi-background-image('/cobrands/yodenuncio/images/banner-close-small');
+    @include svg-background-image('/cobrands/yodenuncio/images/banner-close-small');
 }

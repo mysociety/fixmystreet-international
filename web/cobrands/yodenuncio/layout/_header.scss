@@ -29,7 +29,7 @@
     height: $mappage-header-height;
     background-position: 50% 40%;
     background-size: 128px 70px;
-    @include high-dpi-background-image('/cobrands/yodenuncio/images/site-logo-large');
+    @include svg-background-image('/cobrands/yodenuncio/images/site-logo-large');
 
     &:hover {
         background-color: lighten($color-yd-darkblue, 5%);
