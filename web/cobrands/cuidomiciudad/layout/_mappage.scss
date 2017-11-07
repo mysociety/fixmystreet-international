@@ -31,7 +31,7 @@ body.mappage {
     }
 
     #site-logo {
-        @include high-dpi-background-image('images/logo-mobile');
+        @include svg-background-image('images/logo-mobile');
         background-size: 175px 40px;
         background-position: 0 0;
         width: 175px;
@@ -54,7 +54,7 @@ body.mappage {
     color: $color-cmc-blue;
     padding-right: 4em; // 2em (44px) for arrow icon, plus 1em gutter either side
 
-    @include high-dpi-background-image('images/click-map-arrow');
+    @include svg-background-image('images/click-map-arrow');
     background-size: 66px 44px;
     background-position: right center;
     background-repeat: no-repeat;

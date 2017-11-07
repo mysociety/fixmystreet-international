@@ -12,7 +12,7 @@
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 175px 40px;
-    @include high-dpi-background-image('images/logo-footer');
+    @include svg-background-image('images/logo-footer');
 }
 
 .site-footer__row {

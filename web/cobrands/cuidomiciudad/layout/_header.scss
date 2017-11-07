@@ -21,7 +21,7 @@ body {
 
 // Custom CMC logo - also horizontally centred, rather than left-aligned.
 #site-logo {
-    @include high-dpi-background-image('images/logo-mobile');
+    @include svg-background-image('images/logo-mobile');
     background-size: 175px 40px;
     background-position: 0 0;
     left: 50%;
@@ -31,7 +31,7 @@ body {
 
     // On wide screens, the logo gets bigger.
     @media (min-width: $screen-lg-min) {
-        @include high-dpi-background-image('images/logo');
+        @include svg-background-image('images/logo');
         background-size: 300px 75px;
         margin-left: (300px * 0.5 * -1);
         width: 300px;

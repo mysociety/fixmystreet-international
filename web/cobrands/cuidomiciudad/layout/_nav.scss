@@ -64,28 +64,28 @@
         }
 
         .nav-menu__report {
-            @include high-dpi-background-image('images/nav-report');
+            @include svg-background-image('images/nav-report');
         }
 
         .nav-menu__account {
-            @include high-dpi-background-image('images/nav-account');
+            @include svg-background-image('images/nav-account');
             margin-right: 360px; // make room for the wider logo
         }
 
         .nav-menu__account--signed-in {
-            @include high-dpi-background-image('images/nav-signed-in');
+            @include svg-background-image('images/nav-signed-in');
         }
 
         .nav-menu__reports {
-            @include high-dpi-background-image('images/nav-reports');
+            @include svg-background-image('images/nav-reports');
         }
 
         .nav-menu__help {
-            @include high-dpi-background-image('images/nav-help');
+            @include svg-background-image('images/nav-help');
         }
 
         .nav-menu__shortlist {
-            @include high-dpi-background-image('images/nav-shortlist');
+            @include svg-background-image('images/nav-shortlist');
         }
     }
 }

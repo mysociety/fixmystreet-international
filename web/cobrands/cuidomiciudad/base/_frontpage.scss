@@ -113,7 +113,7 @@ body.frontpage {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 30px 30px;
-        @include high-dpi-background-image('images/home-search');
+        @include svg-background-image('images/home-search');
     }
 }
 
