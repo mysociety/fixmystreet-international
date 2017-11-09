@@ -16,4 +16,12 @@ sub admin_allow_user {
     return 1 if $user->is_superuser || $user->from_body;
 }
 
+sub pin_colour {
+    my ( $self, $p, $context ) = @_;
+    return 'green' if $p->is_closed || $p->is_fixed;
+    return 'red' if $p->state eq 'confirmed';
+    return 'yellow'; # all the other `open_states` like "in progress"
+}
+
+
 1;
