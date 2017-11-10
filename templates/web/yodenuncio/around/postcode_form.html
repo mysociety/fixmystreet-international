@@ -49,6 +49,7 @@
                 <label for="pc">[% loc('Enter a nearby street name and area') %]</label>
                 <input type="text" class="form-control" name="pc" placeholder="[% tprintf(loc('e.g. ‘%s’ or ‘%s’'), c.cobrand.example_places) %]">
                 <input type="submit" value="[% loc('Go') %]">
+                <p><a id="geolocate_link">[% loc('or locate me automatically') %]</a></p>
             </fieldset>
 
             [% IF partial_token %]

@@ -20,17 +20,12 @@ $(function(){
     });
 
     $('.js-geolocation-option').each(function(){
-        if (!geo_position_js.init()) {
+        if (!('geolocation' in navigator)) {
+            $('#geolocate_link').hide();
             return;
         }
 
-        var $fieldset = $(this);
-        var $form = $fieldset.parent();
-        var $link = $('<a>');
-
-        $link.attr('id', 'geolocate_link');
-        $link.text(translation_strings.geolocate);
-        $link.wrap('<p>').parent().appendTo($fieldset);
+        var $form = $(this).parent();
 
         fixmystreet.geolocate.setup(function(pos) {
             var params = {
