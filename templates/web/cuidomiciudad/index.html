@@ -39,6 +39,7 @@
               <input type="hidden" name="filter_category" value="[% c.user.categories.join(",") | html %]">
             [% END %]
         </form>
+        <a href="[% c.uri_for('/around') %]" id="geolocate_link">&hellip; [% loc('or locate me automatically') %]</a>
     </div>
 </div>
 
