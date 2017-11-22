@@ -1,6 +1,5 @@
-[% PROCESS 'front/javascript.html' %]
-
-[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
+[% SET bodyclass = 'frontpage fullwidthpage' ~%]
+[% INCLUDE 'header.html', title = '' %]
 
 [% IF error %]
     <p class="form-error">[% error %]</p>

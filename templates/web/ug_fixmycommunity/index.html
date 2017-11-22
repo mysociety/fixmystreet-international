@@ -1,7 +1,6 @@
-[% map_js = PROCESS 'front/javascript.html' %]
-
+[% SET bodyclass = 'frontpage fullwidthpage' ~%]
 [% pre_container_extra = PROCESS 'around/postcode_form.html' %]
-[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
+[% INCLUDE 'header.html', title = '' %]
 
 [% IF error %]
     <p class="form-error">[% error %]</p>
