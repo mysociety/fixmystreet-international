@@ -10,6 +10,7 @@ sub country {
 
 sub languages { [ 'es-do,Spanish,es_DO' ] }
 sub language_override { 'es-do' }
+sub language_domain { 'YoDenuncio' }
 
 sub admin_allow_user {
     my ( $self, $user ) = @_;
