@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# abort on any errors
+set -e
+
+# Allow null globs, to prevent weird file creation
+shopt -s nullglob
+
+# check that we are in the expected directory
+cd `dirname $0`/../..
+
+echo "Creating merged po files:"
+
+LOCALE_SOURCE_DIR=locale
+LOCALE_CHANGE_DIR=fixmystreet-international/locale_changes
+LOCALE_TARGET_DIR=fixmystreet-international/locale
+for lang_dir in $LOCALE_CHANGE_DIR/*; do
+    lang=$(basename "$lang_dir")
+    for changes in $lang_dir/LC_MESSAGES/*.po; do
+        fn=$(basename "$changes")
+        out=$LOCALE_TARGET_DIR/$lang/LC_MESSAGES/$fn
+        source=$LOCALE_SOURCE_DIR/$lang/LC_MESSAGES/FixMyStreet.po
+        msgcat --no-wrap --use-first -o $out $changes $source
+        echo "Merged $lang locale…FixMyStreet.po + locale_changes…$fn to international’s locale…$fn"
+    done
+done
