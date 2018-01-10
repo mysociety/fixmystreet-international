@@ -18,6 +18,15 @@ LN_FLAGS="-s -f -v"
 
 echo "Creating symlinks in $(pwd):"
 
+LOCALE_SOURCE_DIR=fixmystreet-international/locale
+LOCALE_TARGET_DIR=locale
+for lang_dir in $(pwd)/$LOCALE_SOURCE_DIR/*; do
+    lang=$(basename $lang_dir)
+    for source in $lang_dir/LC_MESSAGES/*.po; do
+        ln $LN_FLAGS $source $LOCALE_TARGET_DIR/$lang/LC_MESSAGES/
+    done
+done
+
 PERL_MODULES_SOURCE_DIR=fixmystreet-international/perllib/FixMyStreet/Cobrand
 PERL_MODULES_TARGET_DIR=perllib/FixMyStreet/Cobrand
 for cobrand in $(pwd)/$PERL_MODULES_SOURCE_DIR/*pm; do
@@ -52,4 +61,6 @@ ln $LN_FLAGS ../../../$WEB_ASSETS_TARGET_DIR/fixmystreet .
 cd ../../..
 
 echo "Cleaning up removed cobrands"
-find $PERL_MODULES_TARGET_DIR $WEB_TEMPLATES_TARGET_DIR $EMAIL_TEMPLATES_TARGET_DIR $WEB_ASSETS_TARGET_DIR -maxdepth 1 -type l -exec test ! -e {} \; -print -delete
+find $LOCALE_TARGET_DIR $PERL_MODULES_TARGET_DIR $WEB_TEMPLATES_TARGET_DIR \
+    $EMAIL_TEMPLATES_TARGET_DIR $WEB_ASSETS_TARGET_DIR \
+    -maxdepth 1 -type l -exec test ! -e {} \; -print -delete

@@ -1,0 +1,26 @@
+[% DEFAULT list_of_names = bodies_to_list_names %]
+
+<div id="category_meta">
+  [%- IF category_extras.$category.size OR report_extra_fields %]
+    <div class="report-form-privacy-reminder">
+        <h2>
+            Detalles Privados
+        </h2>
+        <p>
+            Tus detalles privados serán enviados a la Policía Nacional o el
+            Ministerio Público, pero nunca serán publicada sin autorización
+            previa.
+        </p>
+    </div>
+    [%- IF category_extras.$category.size %]
+        [% INCLUDE 'report/new/category_extras_fields.html' metas=category_extras.$category %]
+    [% END %]
+
+    [%- IF report_extra_fields %]
+        [% FOREACH extras IN report_extra_fields %]
+            [% cat_prefix = "extra[" _ extras.id _ "]" %]
+            [% INCLUDE 'report/new/category_extras_fields.html' metas=extras.get_extra_fields %]
+        [% END %]
+    [%- END %]
+  [%- END %]
+</div>

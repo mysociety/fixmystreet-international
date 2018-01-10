@@ -1,0 +1,89 @@
+.box-warning {
+    background-color: mix(#fff, $color-yd-terracotta, 70%);
+}
+
+.problem-form-header {
+    margin: -1em -1em 0 -1em;
+    background: $color-yd-orange;
+    padding: 1em;
+    color: $color-yd-darkblue;
+}
+
+.report-form-privacy-reminder {
+    margin: 1em -1em;
+    padding: 1em;
+    background-color: #eee;
+
+    h2 {
+        font-family: inherit;
+        font-size: 1em;
+        text-transform: none;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.8em;
+        margin: 0.5em 0 0 0;
+    }
+}
+
+// TODO: Icon?
+.change_location {
+    border: none;
+    padding-left: 0;
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.extra-category-questions {
+    background: transparent;
+
+    &:before {
+        display: none;
+    }
+}
+
+[data-category="Corrupción Policial"] {
+    .form-control {
+        border-color: $color-yd-cyan;
+    }
+
+    .form-box,
+    .report-form-privacy-reminder {
+        background-color: mix(#fff, $color-yd-cyan, 80%);
+    }
+}
+
+[data-category="Delito Contra Mi Persona"] {
+    .form-control {
+        border-color: $color-yd-terracotta;
+    }
+
+    .form-box,
+    .report-form-privacy-reminder {
+        background-color: mix(#fff, $color-yd-terracotta, 80%);
+    }
+}
+
+[data-category="Violencia Contra la Mujer"] {
+    .form-control {
+        border-color: $color-yd-green;
+    }
+
+    .form-box,
+    .report-form-privacy-reminder {
+        background-color: mix(#fff, $color-yd-green, 80%);
+    }
+}
+
+[data-category="Violencia Domestica Intrafamiliar"] {
+    .form-control {
+        border-color: $color-yd-orange;
+    }
+
+    .form-box,
+    .report-form-privacy-reminder {
+        background-color: mix(#fff, $color-yd-orange, 80%);
+    }
+}

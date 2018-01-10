@@ -1,0 +1,84 @@
+[% SET bodyclass = 'frontpage fullwidthpage' ~%]
+[% pre_container_extra = PROCESS 'around/postcode_form.html' %]
+[% include_privacy_assurance = 1 %]
+[% INCLUDE 'header.html', title = '' %]
+
+[% IF error %]
+    <p class="form-error">[% error %]</p>
+[% END %]
+
+[% TRY %][% PROCESS 'front/pre-steps.html' %][% CATCH file %][% END %]
+
+<div class="frontpage__how-it-works">
+    <h2>¿Como funciona?</h2>
+    <ol>
+        <li>Haz un click en el icono con el tipo de denuncia que deseas realizar</li>
+        <li>Introduce el nombre de la calle o el lugar de los hechos en la casilla</li>
+        <li>Señala en el mapa la localización exacta del problema</li>
+        <li>Introduce los detalles de tu denuncia</li>
+        <li>Yo Denuncio le enviará automáticamente tu reporte a las autoridades encargadas de darle seguimento</li>
+    </ol>
+</div>
+
+</div>[%# close .content %]
+</div>[%# close .container %]
+
+<div class="frontpage__categories">
+    <div class="container">
+        <h2>Tipos de denuncia</h2>
+
+        <ul class="frontpage__categories__primary">
+            <li>
+                <h3>
+                    Delito<br>
+                    Contra Mi<br>
+                    Persona
+                </h3>
+                <ul class="frontpage__categories__secondary">
+                    <li>Robo</li>
+                    <li>Daño a Propiedad</li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Corrupción<br>
+                    Policial
+                </h3>
+                <ul class="frontpage__categories__secondary">
+                    <li>Agresión y Violencia Policial</li>
+                    <li>Solicitud de Soborno</li>
+                    <li>Abuso de Autoridad</li>
+                    <li>Detención o Encierro Ilegal</li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Violencia<br>
+                    Contra<br>
+                    la Mujer
+                </h3>
+                <ul class="frontpage__categories__secondary">
+                    <li>Heridas y Golpes Voluntarios</li>
+                    <li>Agresión Sexual</li>
+                    <li>Violación</li>
+                    <li>Acoso Sexual</li>
+                    <li>Proxenetismo</li>
+                    <li>Difusion de Imagenes sin Consentimiento</li>
+                </ul>
+            </li>
+            <li>
+                <h3>
+                    Violencia<br>
+                    Domestica<br>
+                    Intrafamiliar
+                </h3>
+                <ul class="frontpage__categories__secondary">
+                    <li>Maltrato a Niños(as) &amp; Adolescentes</li>
+                    <li>Incesto</li>
+                </ul>
+            </li>
+        </ul>
+
+[%# .frontpage__categories and .container will be closed by footer.html %]
+
+[% INCLUDE 'footer.html' %]

@@ -1,0 +1,44 @@
+#site-logo {
+    width: 75px;
+    height: 65px; // makes #site-header a bit taller
+    background-position: 0 10px; // visually align *words* in logo closer to centre
+    background-size: 75px 40px;
+    @include svg-background-image('/cobrands/yodenuncio/images/site-logo-small');
+}
+
+#nav-link {
+    right: 10px; // visually compensate for taller #site-header
+}
+
+#report-cta {
+    display: none;
+}
+
+.privacy-assurance {
+    padding: 1em 0;
+    background-color: lighten($color-yd-orange, 5%);
+    color: $color-yd-darkblue;
+
+    p {
+        margin-bottom: 0;
+        padding-right: 64px; // leave space for close button
+    }
+}
+
+.privacy-assurance__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 64px 0 0 0;
+    height: 0;
+    width: 64px;
+    overflow: hidden;
+
+    color: inherit;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 32px 32px;
+    @include svg-background-image('/cobrands/yodenuncio/images/banner-close-small');
+}
