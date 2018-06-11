@@ -43,3 +43,7 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
     // Match the height of #site-header (75px logo plus 5em padding).
     top: 75px + (5 * 16px);
 }
+
+#main-nav {
+    height: auto;
+}
