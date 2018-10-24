@@ -22,9 +22,9 @@ $primary_text: #222222; // text colour wherever $primary is the background
 $base_bg: white; // background on body and .tablewrapper on desktop
 $base_fg: #000; // text color on body and .tablewrapper on desktop
 
-$map_nav_bg: $color-yd-darkblue; // background for `#site-header` on mobile, and `body.mapppage #site-header` on desktop
-$nav_fg: #fff; // text color for `#site-header` mobile, and `.nav-menu a` on desktop
-$nav_fg_hover: $primary; // hover text color for `.nav-menu a`
+$nav_background_colour: $color-yd-darkblue; // background for `#site-header` on mobile, and `body.mapppage #site-header` on desktop
+$nav_colour: #fff; // text color for `#site-header` mobile, and `.nav-menu a` on desktop
+$nav_hover_background_colour: $primary; // hover text color for `.nav-menu a`
 
 $header-top-border: false;
 
