@@ -1,18 +1,23 @@
 [% IF category_options.size ~%]
+    [%~ BLOCK category_option ~%]
+    [% cat_op_lc = cat_op.category | lower =%]
+    <option value='[% cat_op.category | html %]'[% ' selected' IF report.category == cat_op.category || category_lc == cat_op_lc || (category_options.size == 2 AND loop.last) ~%]
+    >[% IF loop.first %][% cat_op.category_display ~%]
+    [% ELSIF lang_code == 'fr' %][% c.cobrand.change_category_text(cat_op.category_display) | html ~%]
+    [% ELSE %][% cat_op.category_display | html ~%]
+    [% END ~%]
+    </option>
+    [%~ END ~%]
+
     [% IF category;
         category_lc = category | lower;
        END; ~%]
     <label for='form_category' id="form_category_label">
         [%~ loc('Category') ~%]
     </label>[% =%]
-    <select class="form-control" name='category' id='form_category'>
+    <select class="validCategory form-control" name='category' id='form_category' required>
         [%~ FOREACH cat_op IN category_options ~%]
-        [% cat_op_lc = cat_op | lower =%]
-        <option value='[% cat_op | html %]'[% ' selected' IF report.category == cat_op || category_lc == cat_op_lc || (category_options.size == 2 AND loop.last) ~%]
-        >[% IF loop.first %][% cat_op ~%]
-         [% ELSIF lang_code == 'fr' %][% c.cobrand.change_category_text(cat_op) | html ~%]
-         [% ELSE %][% cat_op | html ~%]
-         [% END %]</option>
+            [% INCLUDE category_option %]
         [%~ END =%]
     </select>
 [%~ END ~%]
